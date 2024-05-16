@@ -1,0 +1,112 @@
+\chapter{Requisitos}
+\label{requisitos}
+
+Na proposta subjacente ao contrato ao abrigo do qual se redige este relatório, constavam vários grupos de requisitos.
+Neste capítulo, contextualiza-se cada um deles de acordo com o protótipo (cap. \ref{prototipo}) instalado, parametrizado 
+e desenvolvido.
+
+\section{Requisitos}
+
+Nas subsecções seguintes descrevem-se os conceitos associados a cada requisito bem como a sua implementação ou possível 
+implementação no protótipo.
+
+\subsection{Requisitos funcionais de alto nível}
+
+\begin{itemize}
+\item Deteção automática de cumprimento de normas de produção de atos normativos;
+\item Observação de interpretações firmadas em jurisprudência sobre normas;
+\item Apoio à elaboração de tarefas de avaliação normativa;
+\item Automatização dos processos de avaliação legislativa para textos preparados na plataforma;
+\item Verificação e validação das referências normativas e legais identificadas nos textos preparados
+na plataforma (verificação da existência das normas invocadas);
+\item Pesquisa e identificação automática de legislação e jurisprudência;
+\item Verificação semântica das normas invocadas.
+\end{itemize}
+
+\subsection{Requisitos funcionais}
+
+\begin{itemize}
+\item Descrição dos workflows para a criação e gestão de atos normativos;
+\item (Possibilidade) Descrição destes processos em BPMN;
+\item (Possibilidade) Descrição do ciclo de vida dos documentos na plataforma.
+\end{itemize}
+
+\subsection{Requisitos de interoperabilidade}
+
+\begin{itemize}
+\item Integração com fontes primárias fundamentais, designadamente bases de dados, com toda a
+legislação e atos normativos, para apoio à redação legislativa e normativa: p.e., Diário da
+República;
+\item Integração com fontes primárias de jurisprudência: p. ex., ECLI;
+\item Integração com entidades parceiras identificadas para o fornecimento de dados;
+\item Interoperabilidade técnica: protocolos de comunicação, API de dados REST ou Web Service ;
+\item Interoperabilidade Sintática: formato de importação e exportação de dados; deverá ser baseado
+em XML e seguir normas internacionais (Akoma Ntoso XML format, uma norma OASIS para
+documentos legislativos);
+\item Interoperabilidade Semântica: representação semântica dos dados, ontologias OWL, utilização
+do ELI e da ontologia associada;
+\end{itemize}
+
+\subsection{Identificação dos mecanismos de IA e das ferramentas conexas a usar no desenvolvimento
+da plataforma}
+
+\begin{itemize}
+\item Utilização de mecanismos de Processamento de Linguagem Natural (PLN) e Mineração de
+Texto, para extração de representação e significados dos textos disponíveis na base de dados
+da plataforma;
+\item Utilização de aprendizagem pela máquina (Machine Learning ) para incrementar a precisão do
+sistema (processo de validação pelo utilizador/Configurador);
+\item Definição de regras de mapeamento para aumentar a precisão das árvores de decisão
+adotadas;
+\item Definição de estratégia de redes neuronais para efeitos de utilização de sistemas de previsão,
+designadamente na identificação de legislação e jurisprudência;
+\item Identificação dos algoritmos mais adequados e o seu futuro desenvolvimento;
+\item Identificação das necessidades de treino do sistema de IA.
+\end{itemize}
+
+
+\subsection{Requisitos da infraestrutura}
+
+\begin{itemize}
+\item Arquitetura global da plataforma;
+\item Identificação dos serviços que devem compor o sistema;
+\item Identificação dos requisitos técnicos de cada serviço;
+\item Identificação/previsão das necessidades de processamento, espaço de armazenamento e
+conectividade;
+\item A Identificação de necessidade de computação em Cloud ou on-premises e respetivos
+requisitos;
+\item Identificação dos requisitos de interoperabilidade face a sistemas externos (comunicação,
+armazenamento e representação dos dados): por exemplo, bases de dados do DRE - INCM e
+de Jurisprudência dos tribunais, Ministério da Justiça (MJ), IGFEJ, 
+Conselho Superior da Magistratura (CSM).
+\end{itemize}
+
+
+\section{Protótipo/Prova de Conceito}
+
+Além dos relatórios produzidos, será desenvolvida uma prova de conceito, a uma escala
+reduzida, que permitirá elucidar alguns dos requisitos e, provavelmente, levantar novos requisitos ainda
+não especificados.
+
+A prova de conceito a desenvolver será composta pelas seguintes atividades e respetivos
+resultados:
+
+\begin{itemize}
+\item Adoção do software open source LEOS (Legislation Editing Open Software ), como base da
+solução, instalação e disponibilização online;
+\item Colheita de um subconjunto de legislação do DRE;
+\item Colheita de algumas bases de dados de jurisprudência dos tribunais;
+\item Especificação de um modelo ontológico para a legislação colhida (baseada no trabalho já
+realizado pelo EPO no ELI);
+\item Processamento/Mineração, usando técnicas de NLP (Natural Language Processing ), da
+legislação colhida para extração de dados para o povoamento da ontologia especificada;
+\item Disponibilização da ontologia através de um motor de gestão de bases de dados orientadas a
+grafos online;
+\item Disponibilização de uma interface de pesquisa baseada em SPARQL que permitirá navegar na
+ontologia;
+\item Integração do LEOS com a base de dados ontológica: como suporte à edição de legislação;
+\item  (Possibilidade) Identificar os vários tipos de documentos legislativos e estudar a hipótese de
+aplicar técnicas de Machine Learning (ML) para gerar automaticamente conteúdo novo no
+documento que está a ser editado.
+\end{itemize}
+

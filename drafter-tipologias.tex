@@ -13,6 +13,36 @@ Consultou-se a entidade adjudicante que designou como prioritárias a lei, o dec
 a portaria e o despacho normativo 
 (publicado na 2.a série do Diário da República) e, em certos casos, a resolução do Conselho de Ministros.
 
+\section{Metadados}
+
+Depois de uma análise feita sobre vários documentos de cada uma destas tipologias, chegou-se ao seguinte conjunto
+de metadados, comuns a todas:
+
+\begin{description}
+    \item[referencia] - fórmula usualmente utilizada para identificar os diplomas; 
+    Normalmente, os documentos dentro de uma tipologia 
+    são referenciados por combinação de tipologia, número de série e ano;
+    \item[tipologia] - designação da tipologia: \texttt{Lei}, \texttt{Decreto-lei}, etc;
+    \item[localPublicacao] - local de publicação, 1.ª ou 2.ª Série do 
+    Diário da República;
+    \item[numPublicacao] - número de publicação, número atribuído sequencialmente 
+    dentro do mesmo ano e da mesma tipologia;
+    \item[dataPublicacao] - data de publicação do diploma;
+    \item[emissor] - entidade emissora; Pode ser a Assembleia da República, o Governo, 
+    a Presidência do Conselho de Ministros, um Ministério em Especial ou uma Secretaria 
+    de Estado de algum Ministério;
+    \item[sumario] - contém a indicação do assunto principal do diploma;
+    \item[preambulo] - contém um enquadramento legal e justificativo do diploma, 
+    que normalmente termina com a indicação de que a entidade emissora \emph{"decreta o seguinte"};
+    \item[articulado] - contém a parte dispositiva do diploma, artigos/normas legais;
+    \item[anexos] - pode conter ou não; são usualmente colocadas as tabelas, listagem, mapas, símbolos, 
+    ou outros elementos gráficos ou quantitativos referidos no articulado.
+\end{description}
+
+No seguimento desta análise, referem-se exemplos reais de documentos nas tipologias selecionadas e apresentam-se 
+exemplos de como seriam os respetivos registos de metadados em XML. Escolhe-se o XML por ser um formato aberto,
+e por ser o formato a usar na plataforma a ser desenvolvida.
+
 \section{Lei}
 
 Um documento desta tipologia pode ser definido como um ato legislativo, emanado pela Assembleia da República, 
@@ -35,14 +65,91 @@ com indicação da matéria a que respeita, do local e data da assinatura, sendo
 instrumento publicado em anexo).
 \end{quoting}
 
-L n.º 74/98, de 11 de novembro
-1.ª Série
-n.º 74
-11/11/1998
-Assembleia da República
-Lei n.º 74/98, de 11 de novembro
-Publicação, identificação e formulário dos diplomas
-A Assembleia da República decreta, nos termos da alínea c) do artigo 161.º da Constituição, para valer como lei geral da República, o seguinte:
-v. diploma
-v. diploma
+\subsection{Exemplo: Lei n.º 74/98, de 11 de novembro} 
+
+O seu registo de metadados teria a seguinte extrutura em XML:
+
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\small, commandchars=\\\{\}]
+<?xml version="1.0" encoding="UTF-8"?>
+<documento>
+    <referencia>Lei 74/98</referencia>
+    <tipologia>Lei</tipologia>
+    <localPublicacao>1.ª Série</localPublicacao>
+    <numPublicacao>74</numPublicacao>
+    <dataPublicacao>1998-11-11</dataPublicacao>
+    <emissor>Assembleia da República</emissor>
+    <sumario>Publicação, identificação e formulário 
+            dos diplomas.</sumario>
+    <preambulo>A Assembleia da República decreta, 
+            nos termos da alínea c) do artigo 161.º da 
+            Constituição, para valer como lei geral da República, 
+            o seguinte:</preambulo>
+    <articulado>ver diploma</articulado>
+    <anexos>ver diploma</anexos>
+</documento>
+\end{Verbatim}
+
+
+\section{Decreto-lei}
+
+Um documento desta tipologia pode ser definido como um ato legislativo, diploma do Governo, no exercício 
+da sua função legislativa, ao abrigo do artigo 198.º da Constituição da República Portuguesa.
+
+Os decretos-lei têm o seguinte formulário:
+
+\begin{description}
+    \item[Decretos-leis previstos na alínea a) do n.º 1 do artigo 198.º da Constituição]: 
+    
+    \begin{quoting}
+        Nos termos da alínea a) do n.º 1 do artigo 198.º da Constituição, o Governo decreta o seguinte:
+        (Segue-se o texto.)
+    \end{quoting}
+
+    \item[Decretos-leis previstos na alínea b) do n.º 1 do artigo 198.º da Constituição]: 
+    
+    \begin{quoting}
+        No uso da autorização legislativa concedida pelo artigo... da Lei n.º ...., de... 
+        de..., e nos termos da alínea b) do n.º 1 do artigo 198.º da Constituição, 
+        o Governo decreta o seguinte:
+        (Segue-se o texto.)
+    \end{quoting}
+
+    \item[Decretos-leis previstos na alínea c) do n.º 1 do artigo 198.º da Constituição]: 
+    
+    \begin{quoting}
+        No desenvolvimento do regime jurídico estabelecido pela Lei (ou Decreto-Lei) n.º ...., 
+        de... de..., e nos termos da alínea c) do n.º 1 do artigo 198.º da Constituição, 
+        o Governo decreta o seguinte:
+        (Segue-se o texto.)
+    \end{quoting}
+
+    \item[Decretos-leis previstos no n.º 2 do artigo 198.º da Constituição]: 
+    
+    \begin{quoting}
+        Nos termos do disposto no n.º 2 do artigo 198.º da Constituição, o Governo decreta o seguinte:
+        (Segue-se o texto.)
+    \end{quoting}
+
+\end{description}
+
+\subsection{Exemplo: DL n.º 4/2024, de 5 de janeiro} 
+    
+O seu registo de metadados teria a seguinte extrutura em XML:
+    
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\small, commandchars=\\\{\}]
+<?xml version="1.0" encoding="UTF-8"?>
+    <documento>
+        <referencia>DL 4/2024</referencia>
+        <tipologia>DL</tipologia>
+        <localPublicacao>1.ª Série</localPublicacao>
+        <numPublicacao>4</numPublicacao>
+        <dataPublicacao>2024-01-05</dataPublicacao>
+        <emissor>Presidência do Conselho de Ministros</emissor>
+        <sumario>Institui o mercado voluntário de carbono e estabelece as 
+            regras para o seu funcionamento.</sumario>
+        <preambulo>ver diploma</preambulo>
+        <articulado>ver diploma</articulado>
+        <anexos>ver diploma</anexos>
+    </documento>
+\end{Verbatim}
 

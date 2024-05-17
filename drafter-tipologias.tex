@@ -89,6 +89,92 @@ O seu registo de metadados teria a seguinte extrutura em XML:
 </documento>
 \end{Verbatim}
 
+Este documento XML, foi criado apenas para dar uma visão minimalista dos metadados num formato inteligível quer 
+para a máquina quer para o humano. Na plataforma final, estes documentos terão de estar no formato \texttt{Akoma Ntoso}.
+É um formato que traz mais alguma complexidade pois prevê a interoperabilidade internacional desta informação.
+A título de exemplo, apresenta-se uma possível versão do documento acima neste formato.
+
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\footnotesize, commandchars=\\\{\}]
+<?xml version="1.0" encoding="UTF-8"?>
+  <akomaNtoso>
+    <act>
+      <meta>
+        <identification>
+          <FRBRWork>
+            <FRBRthis value="/akn/pt/act/lei/1998-11-11/74"/>
+            <FRBRuri value="/akn/pt/act/lei"/>
+            <FRBRdate date="1998-11-11" name="Lei 74/98"/>
+            <FRBRauthor href="#assembleia-da-republica" as="author"/>
+            <FRBRcountry value="pt"/>
+          </FRBRWork>
+          <FRBRExpression>
+            <FRBRthis value="/akn/pt/act/lei/1998-11-11/74@1998-11-11"/>
+            <FRBRuri value="/akn/pt/act/lei/1998-11-11/74"/>
+            <FRBRdate date="1998-11-11" name="expressed"/>
+            <FRBRauthor href="#assembleia-da-republica" as="author"/>
+            <FRBRlanguage language="pt"/>
+          </FRBRExpression>
+          <FRBRManifestation>
+            <FRBRthis value="/akn/pt/act/lei/1998-11-11/74@1998-11-11"/>
+            <FRBRuri value="/akn/pt/act/lei/1998-11-11/74@1998-11-11"/>
+            <FRBRdate date="1998-11-11" name="manifested"/>
+            <FRBRauthor href="#assembleia-da-republica" as="author"/>
+          </FRBRManifestation>
+        </identification>
+        <publication>
+          <published>
+            <refersTo value="1ª Série"/>
+            <number value="74"/>
+            <date date="1998-11-11"/>
+          </published>
+        </publication>
+        <references source="#assembleia-da-republica">
+          <TLCOrganization id="assembleia-da-republica">
+            <orgName>Assembleia da República</orgName>
+          </TLCOrganization>
+        </references>
+      </meta>
+      <body>
+        <preamble>
+          <p>A Assembleia da República decreta, nos termos da alínea c) 
+            do artigo 161.º da Constituição, para valer como lei geral da 
+            República, o seguinte:</p>
+        </preamble>
+        <article>
+          <heading>Articulado</heading>
+          <p>ver diploma</p>
+        </article>
+        <annex>
+          <heading>Anexos</heading>
+          <p>ver diploma</p>
+        </annex>
+      </body>
+    </act>
+  </akomaNtoso>        
+\end{Verbatim}
+
+Explicação da estrutura:
+\begin{description}
+\item[akomaNtoso]: Elemento raiz que contém todo o documento;
+\item[act]: Elemento que representa o ato legislativo;
+\item[meta]: Metadados do documento, incluindo identificação e publicação;
+\item[identification]: Identificação do documento nas três fases (Work, Expression, Manifestation);
+\item[FRBRWork]: Representa a obra em si, contendo a URI e data de promulgação;
+\item[FRBRExpression]: Representa a expressão da obra, incluindo a data e idioma da publicação;
+\item[FRBRManifestation]: Representa a manifestação física ou digital da expressão da obra;
+\item[publication]: Detalhes da publicação, como série, número e data;
+\item[preface]: Contém o preâmbulo do documento;
+\item[preamble]: O texto do preâmbulo;
+\item[body]: Corpo principal do documento, dividido em seções;
+\item[section]: Seções do documento, como sumário, articulado e anexos;
+\item[heading]: Título da seção;
+\item[p]: Parágrafo de texto.
+\end{description}
+
+Este exemplo cobre a estrutura básica do documento original dentro do padrão Akoma Ntoso. 
+Dependendo dos detalhes específicos e dos requisitos adicionais, como normas de citação ou referências cruzadas, 
+a estrutura pode ser expandida.
+
 
 \section{Decreto-lei}
 
@@ -351,12 +437,55 @@ O seu registo de metadados teria a seguinte extrutura em XML:
     </documento>
 \end{Verbatim}
 
+
+\section{Akoma Ntoso XML}
+
+Akoma Ntoso (Arquitetura para Gestão Orientada ao Conhecimento de Textos Normativos Africanos usando Padrões Abertos e Ontologias) 
+é uma norma técnica internacional para representar documentos executivos, legislativos e judiciais de maneira estruturada, 
+utilizando um vocabulário XML específico do domínio.
+
+O termo \texttt{akoma ntoso} significa "corações ligados" na língua Akan da África Ocidental e, por essa razão, foi escolhido 
+para designar esta norma XML. A sigla usada normalmente para designar este formato é \texttt{AKN}.
+
+\subsection{Estrutura e composição}
+
+A norma AKN fornece uma estrutura abrangente para representar documentos parlamentares, legislativos e judiciais 
+num formato XML legível quer por máquinas quer por humanos. 
+
+Tem os seguintes componentes:
+
+\begin{description}
+\item[Vocabulário XML]: Este define o mapeamento entre a estrutura dos documentos legislativos e suas representações equivalentes 
+em XML. Essencialmente, traduz os elementos dos textos legislativos num formato estruturado que pode ser facilmente processado por 
+máquinas;
+
+\item[Esquema XML]: Especificação da estrutura e respetivas restrições dos documentos legislativos em XML. 
+Oferece uma capacidade descritiva extensiva aos vários tipos de documentos legislativos, incluindo:
+    \begin{itemize}
+        \item Documentos Parlamentares: Projetos de lei, atos e registros parlamentares.
+        \item Documentos Judiciários: Sentenças e opiniões judiciais.
+        \item Publicações Governamentais: Diários oficiais e outros registros governamentais.
+    \end{itemize}
+
+\item[Nomenclatura]: A AKN recomenda uma nomenclatura para identificar unicamente as fontes legislativas, 
+baseada no modelo Requisitos Funcionais para Registros Bibliográficos (FRBR). 
+Isso garante que cada documento possa ser identificado e referenciado de forma única, facilitando a gestão e a recuperação.
+
+\item[Definição de Tipo MIME]: Esta especifica o tipo MIME apropriado para documentos Akoma Ntoso, garantindo que sejam corretamente reconhecidos e processados por navegadores web e outros sistemas de software.
+
+\end{description}
+
+Ao aderir a esses padrões, o Akoma Ntoso possibilita a criação de documentos legais interoperáveis, reutilizáveis e acessíveis, facilitando a transparência e a eficiência nos processos legais e legislativos.
+
+
 \section{Sumário}
 
 Ao longo deste capítulo, foram caraterizadas as tipologias de atos normativos que serão 
 consideradas neste trabalho conducente a uma prova de conceito.
 
-Já existe um formato aberto definido para o intercâmbio deste tipo de informação a nível europeu.
+Já existe um formato aberto definido para o intercâmbio deste tipo de informação a nível europeu 
+(Akoma Ntoso XML\footnote{\url{https://www.oasis-open.org/standard/akn-v1-0/}}, 
+uma norma OASIS\footnote{\url{https://www.oasis-open.org/org/}} para documentos legislativos).
 Esse formato está especificado num XML Schema, por isso se adiantou com uma possível
 instância XML para cada um dos tipos de registo.
 

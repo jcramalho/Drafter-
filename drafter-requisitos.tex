@@ -18,14 +18,16 @@ o que será preciso fazer caos não estejam.
 
 \subsection{Requisitos funcionais}
 
-Alguns destes requisitos estão relacionados com políticas sobre a adoção de normas e a criação de processos, no entanto,
-ao colocarmos o LEOS como base, algumas destas decisões já foram tomadas.
+Alguns destes requisitos estão relacionados com políticas sobre a adoção de normas e a especificação e 
+criação de processos, no entanto,
+ao colocarmos o LEOS como base, algumas destas decisões já foram tomadas e parte deste trabalho já está feita.
 
 \subsubsection{Deteção automática de cumprimento de normas de produção de atos normativos}
 
 O LEOS precisa de ser parametrizado com os modelos estruturais dos atos normativos que se pretendem criar.
 No capítulo anterior, apresentou-se uma análise prévia necessária à criação destes modelos. O passo seguinte, será 
 especificar esses modelos em XML numa linguagem específica desenvolvida para o efeito (\ref{???}).
+Apresentam-se exemplos mais à frente \ref{???}.
 
 Esta especificação de cada um dos modelos pode e deve incluir os requisitos estruturais que devem ser observados na 
 produção de atos normativos. Ao fazê-lo, o LEOS ou outra plataforma que os venha a utilizar pode verificar automaticamente 
@@ -102,31 +104,7 @@ Conselho Superior da Magistratura (CSM).
 \end{itemize}
 
 
-\section{Protótipo/Prova de Conceito}
+\subsection{Requisitos de sustentabilidade}
 
-Além dos relatórios produzidos, será desenvolvida uma prova de conceito, a uma escala
-reduzida, que permitirá elucidar alguns dos requisitos e, provavelmente, levantar novos requisitos ainda
-não especificados.
 
-A prova de conceito a desenvolver será composta pelas seguintes atividades e respetivos
-resultados:
-
-\begin{itemize}
-\item Adoção do software open source LEOS (Legislation Editing Open Software ), como base da
-solução, instalação e disponibilização online;
-\item Colheita de um subconjunto de legislação do DRE;
-\item Colheita de algumas bases de dados de jurisprudência dos tribunais;
-\item Especificação de um modelo ontológico para a legislação colhida (baseada no trabalho já
-realizado pelo EPO no ELI);
-\item Processamento/Mineração, usando técnicas de NLP (Natural Language Processing ), da
-legislação colhida para extração de dados para o povoamento da ontologia especificada;
-\item Disponibilização da ontologia através de um motor de gestão de bases de dados orientadas a
-grafos online;
-\item Disponibilização de uma interface de pesquisa baseada em SPARQL que permitirá navegar na
-ontologia;
-\item Integração do LEOS com a base de dados ontológica: como suporte à edição de legislação;
-\item  (Possibilidade) Identificar os vários tipos de documentos legislativos e estudar a hipótese de
-aplicar técnicas de Machine Learning (ML) para gerar automaticamente conteúdo novo no
-documento que está a ser editado.
-\end{itemize}
 

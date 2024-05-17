@@ -1,25 +1,43 @@
-\babel@toc {portuges}{}\relax 
-\contentsline {chapter}{\numberline {1}Entidade Executante}{4}{}%
-\contentsline {section}{\numberline {1.1}Informação de Contacto}{5}{}%
-\contentsline {chapter}{\numberline {2}Sumário executivo}{6}{}%
-\contentsline {chapter}{\numberline {3}Introdução}{7}{}%
-\contentsline {section}{\numberline {3.1}Tipologias de atos normativos}{7}{}%
-\contentsline {section}{\numberline {3.2}Requisitos}{7}{}%
-\contentsline {section}{\numberline {3.3}Protótipo/Prova de Conceito}{8}{}%
-\contentsline {chapter}{\numberline {4}Tipologias de atos normativos}{10}{}%
-\contentsline {section}{\numberline {4.1}Metadados}{10}{}%
-\contentsline {section}{\numberline {4.2}Lei}{11}{}%
-\contentsline {subsection}{\numberline {4.2.1}Exemplo: Lei n.º 74/98, de 11 de novembro}{12}{}%
-\contentsline {section}{\numberline {4.3}Decreto-lei}{12}{}%
-\contentsline {subsection}{\numberline {4.3.1}Exemplo: DL n.º 4/2024, de 5 de janeiro}{13}{}%
-\contentsline {chapter}{\numberline {5}Requisitos}{14}{}%
-\contentsline {section}{\numberline {5.1}Requisitos}{14}{}%
-\contentsline {subsection}{\numberline {5.1.1}Requisitos funcionais de alto nível}{14}{}%
-\contentsline {subsection}{\numberline {5.1.2}Requisitos funcionais}{15}{}%
-\contentsline {subsection}{\numberline {5.1.3}Requisitos de interoperabilidade}{15}{}%
-\contentsline {subsection}{\numberline {5.1.4}Identificação dos mecanismos de IA e das ferramentas conexas a usar no desenvolvimento da plataforma}{15}{}%
-\contentsline {subsection}{\numberline {5.1.5}Requisitos da infraestrutura}{16}{}%
-\contentsline {section}{\numberline {5.2}Protótipo/Prova de Conceito}{16}{}%
-\contentsline {chapter}{\numberline {6}Protótipo/Prova de Conceito}{18}{}%
-\contentsline {section}{\numberline {6.1}Introdução}{18}{}%
-\contentsline {section}{\numberline {6.2}LEOS: Legislation Editing Open Software}{18}{}%
+\babel@toc {portuges}{}
+\contentsline {chapter}{\numberline {1}Entidade Executante}{4}% 
+\contentsline {section}{\numberline {1.1}Informa\IeC {\c c}\IeC {\~a}o de Contacto}{5}% 
+\contentsline {chapter}{\numberline {2}Sum\IeC {\'a}rio executivo}{6}% 
+\contentsline {chapter}{\numberline {3}Introdu\IeC {\c c}\IeC {\~a}o}{7}% 
+\contentsline {section}{\numberline {3.1}Tipologias de atos normativos}{7}% 
+\contentsline {section}{\numberline {3.2}Requisitos}{7}% 
+\contentsline {section}{\numberline {3.3}Prot\IeC {\'o}tipo/Prova de Conceito}{8}% 
+\contentsline {chapter}{\numberline {4}Tipologias de atos normativos}{10}% 
+\contentsline {section}{\numberline {4.1}Metadados}{10}% 
+\contentsline {section}{\numberline {4.2}Lei}{11}% 
+\contentsline {subsection}{\numberline {4.2.1}Exemplo: Lei n.\IeC {\textordmasculine } 74/98, de 11 de novembro}{12}% 
+\contentsline {section}{\numberline {4.3}Decreto-lei}{12}% 
+\contentsline {subsection}{\numberline {4.3.1}Exemplo: DL n.\IeC {\textordmasculine } 4/2024, de 5 de janeiro}{13}% 
+\contentsline {section}{\numberline {4.4}Decreto}{14}% 
+\contentsline {subsection}{\numberline {4.4.1}Exemplo: Decreto 1/2024, de 22 de janeiro}{14}% 
+\contentsline {section}{\numberline {4.5}Decreto-Regulamentar}{14}% 
+\contentsline {subsection}{\numberline {4.5.1}Exemplo: DR 3/2024, de 21 de fevereiro}{15}% 
+\contentsline {section}{\numberline {4.6}Resolu\IeC {\c c}\IeC {\~a}o do Conselho de Ministros}{15}% 
+\contentsline {subsection}{\numberline {4.6.1}Exemplo: RCM 28/2024, de 23 de fevereiro}{16}% 
+\contentsline {section}{\numberline {4.7}Portaria}{16}% 
+\contentsline {subsection}{\numberline {4.7.1}Exemplo: Portaria 68/2024, de 23 de Fevereiro}{16}% 
+\contentsline {section}{\numberline {4.8}Despacho Normativo}{17}% 
+\contentsline {subsection}{\numberline {4.8.1}Exemplo: DN 1/2024, de 5 de janeiro}{17}% 
+\contentsline {section}{\numberline {4.9}Sum\IeC {\'a}rio}{18}% 
+\contentsline {chapter}{\numberline {5}Requisitos}{19}% 
+\contentsline {section}{\numberline {5.1}Requisitos}{19}% 
+\contentsline {subsection}{\numberline {5.1.1}Requisitos funcionais}{19}% 
+\contentsline {subsubsection}{Dete\IeC {\c c}\IeC {\~a}o autom\IeC {\'a}tica de cumprimento de normas de produ\IeC {\c c}\IeC {\~a}o de atos normativos}{20}% 
+\contentsline {subsubsection}{Observa\IeC {\c c}\IeC {\~a}o de interpreta\IeC {\c c}\IeC {\~o}es firmadas em jurisprud\IeC {\^e}ncia sobre normas}{20}% 
+\contentsline {subsubsection}{Apoio \IeC {\`a} elabora\IeC {\c c}\IeC {\~a}o de tarefas de avalia\IeC {\c c}\IeC {\~a}o normativa}{20}% 
+\contentsline {subsubsection}{Automatiza\IeC {\c c}\IeC {\~a}o dos processos de avalia\IeC {\c c}\IeC {\~a}o legislativa para textos preparados na plataforma}{20}% 
+\contentsline {subsubsection}{Verifica\IeC {\c c}\IeC {\~a}o e valida\IeC {\c c}\IeC {\~a}o das refer\IeC {\^e}ncias normativas e legais identificadas nos textos preparados na plataforma (verifica\IeC {\c c}\IeC {\~a}o da exist\IeC {\^e}ncia das normas invocadas)}{20}% 
+\contentsline {subsubsection}{Pesquisa e identifica\IeC {\c c}\IeC {\~a}o autom\IeC {\'a}tica de legisla\IeC {\c c}\IeC {\~a}o e jurisprud\IeC {\^e}ncia}{20}% 
+\contentsline {subsubsection}{Verifica\IeC {\c c}\IeC {\~a}o sem\IeC {\^a}ntica das normas invocadas}{20}% 
+\contentsline {subsubsection}{Descri\IeC {\c c}\IeC {\~a}o dos workflows para a cria\IeC {\c c}\IeC {\~a}o e gest\IeC {\~a}o de atos normativos}{20}% 
+\contentsline {subsection}{\numberline {5.1.2}Requisitos de interoperabilidade}{20}% 
+\contentsline {subsection}{\numberline {5.1.3}Identifica\IeC {\c c}\IeC {\~a}o dos mecanismos de IA e das ferramentas conexas a usar no desenvolvimento da plataforma}{21}% 
+\contentsline {subsection}{\numberline {5.1.4}Requisitos da infraestrutura}{21}% 
+\contentsline {section}{\numberline {5.2}Prot\IeC {\'o}tipo/Prova de Conceito}{22}% 
+\contentsline {chapter}{\numberline {6}Prot\IeC {\'o}tipo/Prova de Conceito}{23}% 
+\contentsline {section}{\numberline {6.1}Introdu\IeC {\c c}\IeC {\~a}o}{23}% 
+\contentsline {section}{\numberline {6.2}LEOS: Legislation Editing Open Software}{23}% 

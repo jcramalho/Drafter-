@@ -145,11 +145,218 @@ O seu registo de metadados teria a seguinte extrutura em XML:
         <numPublicacao>4</numPublicacao>
         <dataPublicacao>2024-01-05</dataPublicacao>
         <emissor>Presidência do Conselho de Ministros</emissor>
-        <sumario>Institui o mercado voluntário de carbono e estabelece as 
-            regras para o seu funcionamento.</sumario>
+        <sumario>Institui o mercado voluntário de carbono e 
+            estabelece as regras para o seu funcionamento.</sumario>
         <preambulo>ver diploma</preambulo>
         <articulado>ver diploma</articulado>
         <anexos>ver diploma</anexos>
     </documento>
 \end{Verbatim}
+
+
+\section{Decreto}
+
+Um documento desta tipologia pode ser definido como um Diploma do Governo que visa aprovar 
+os acordos internacionais, ao abrigo do artigo 197.º, n.º 1, al. c), da Constituição da 
+República Portuguesa.
+
+Os decretos têm o seguinte formulário:
+
+\begin{quoting}
+    Nos termos da alínea c) do n.º 1 do artigo 197.º da Constituição, o Governo aprova 
+    o... (segue-se a identificação do acordo internacional em forma simplificada, com 
+    indicação da matéria a que respeita, do local e da data da assinatura, sendo o 
+    teor do respetivo instrumento publicado em anexo).
+\end{quoting}
+
+
+\subsection{Exemplo: Decreto 1/2024, de 22 de janeiro} 
+    
+O seu registo de metadados teria a seguinte extrutura em XML:
+    
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\small, commandchars=\\\{\}]
+<?xml version="1.0" encoding="UTF-8"?>
+    <documento>
+        <referencia>Decreto 1/2024</referencia>
+        <tipologia>Decreto</tipologia>
+        <localPublicacao>1.ª Série</localPublicacao>
+        <numPublicacao>1</numPublicacao>
+        <dataPublicacao>2024-01-22</dataPublicacao>
+        <emissor>Presidência do Conselho de Ministros</emissor>
+        <sumario>Aprova o Acordo de Cooperação Económica entre a 
+            República Portuguesa e a República da Moldova.</sumario>
+        <preambulo>ver diploma</preambulo>
+        <articulado>ver diploma</articulado>
+        <anexos>ver diploma</anexos>
+    </documento>
+\end{Verbatim}
+
+
+\section{Decreto-Regulamentar}
+
+Um documento desta tipologia pode ser definido como um Regulamento. É um diploma do Governo, 
+no exercício da sua função administrativa, ao abrigo dos artigos 199.º, als. c) ou g), e 
+112.º, n.º 6 . É pouco comum.
+
+Os decretos-regulamentares têm o seguinte formulário:
+
+\begin{quoting}
+    Nos termos da alínea c) do artigo 199.º da Constituição e... 
+    (segue-se a identificação do ato legislativo a regulamentar), 
+    o Governo decreta o seguinte: : 
+    (segue-se o texto)
+\end{quoting}
+
+
+\subsection{Exemplo: DR 3/2024, de 21 de fevereiro} 
+    
+O seu registo de metadados teria a seguinte extrutura em XML:
+    
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\small, commandchars=\\\{\}]
+<?xml version="1.0" encoding="UTF-8"?>
+    <documento>
+        <referencia>DR 3/2024</referencia>
+        <tipologia>Decreto-Regulamentar</tipologia>
+        <localPublicacao>1.ª Série</localPublicacao>
+        <numPublicacao>3</numPublicacao>
+        <dataPublicacao>2024-02-21</dataPublicacao>
+        <emissor>Presidência do Conselho de Ministros</emissor>
+        <sumario>Procede à fixação do universo dos contribuintes 
+            abrangidos pela declaração automática de rendimentos.
+        </sumario>
+        <preambulo>ver diploma</preambulo>
+        <articulado>ver diploma</articulado>
+        <anexos>ver diploma</anexos>
+    </documento>
+\end{Verbatim}
+
+
+\section{Resolução do Conselho de Ministros}
+
+Um documento desta tipologia pode ser definido como uma resolução emanada quando 
+o Governo reúne em plenário, concretiza-se o Conselho de Ministros. 
+É um ato normativo do Governo no exercício da sua função administrativa.
+
+As Resoluções do Conselho de Ministros têm o seguinte formulário:
+
+\begin{quoting}
+    Nos termos da alínea... do artigo 199.º da Constituição, o Conselho de Ministros 
+    resolve:
+        (Segue-se o texto.)
+\end{quoting}
+
+Ou:
+\begin{quoting}
+    Nos termos do... (segue-se a identificação do ato e da respetiva norma que 
+    estabelece a exigência de resolução) e da alínea... do artigo 199.º da Constituição, 
+    o Conselho de Ministros resolve:
+    (Segue-se o texto.)
+\end{quoting}
+
+
+\subsection{Exemplo: RCM 28/2024, de 23 de fevereiro} 
+    
+O seu registo de metadados teria a seguinte extrutura em XML:
+    
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\small, commandchars=\\\{\}]
+<?xml version="1.0" encoding="UTF-8"?>
+    <documento>
+        <referencia>RCM 28/2024</referencia>
+        <tipologia>RCM</tipologia>
+        <localPublicacao>1.ª Série</localPublicacao>
+        <numPublicacao>28</numPublicacao>
+        <dataPublicacao>2024-02-23</dataPublicacao>
+        <emissor>Presidência do Conselho de Ministros</emissor>
+        <preambulo>ver diploma</preambulo>
+        <articulado>ver diploma</articulado>
+        <anexos>ver diploma</anexos>
+    </documento>
+\end{Verbatim}
+
+O campo \texttt{sumário} considera-se não aplicável nesta tipologia.
+
+
+\section{Portaria}
+
+Um documento desta tipologia pode ser definido como um diploma do Governo, 
+no exercício da sua função administrativa. 
+É muito comum que a própria lei determine a sua execução mediante portaria.
+
+As Portarias têm o seguinte formulário:
+
+\begin{quoting}
+    Manda o Governo, pelo... (indicar o membro ou membros competentes), 
+    o seguinte: 
+    (Segue texto)
+\end{quoting}
+
+
+\subsection{Exemplo: Portaria 68/2024, de 23 de Fevereiro} 
+    
+O seu registo de metadados teria a seguinte extrutura em XML:
+    
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\small, commandchars=\\\{\}]
+<?xml version="1.0" encoding="UTF-8"?>
+    <documento>
+        <referencia>Portaria 68/2024</referencia>
+        <tipologia>Portaria</tipologia>
+        <localPublicacao>1.ª Série</localPublicacao>
+        <numPublicacao>68</numPublicacao>
+        <dataPublicacao>2024-02-23</dataPublicacao>
+        <emissor>Presidência do Conselho de Ministros</emissor>
+        <sumario>Décima segunda alteração ao Regulamento Específico 
+            do Domínio da Competitividade e Internacionalização
+        </sumario>
+        <preambulo>ver diploma</preambulo>
+        <articulado>ver diploma</articulado>
+        <anexos>ver diploma</anexos>
+    </documento>
+\end{Verbatim}
+
+
+\section{Despacho Normativo}
+
+Um documento desta tipologia pode ser definido como um diploma do Governo, 
+no exercício da sua função administrativa. 
+
+Os Despachos Normativos têm o seguinte formulário:
+
+\begin{quoting}
+    (Inicia por identificar o acto legislativo que lhe serve de base.)
+\end{quoting}
+
+
+\subsection{Exemplo: DN 1/2024, de 5 de janeiro} 
+    
+O seu registo de metadados teria a seguinte extrutura em XML:
+    
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\small, commandchars=\\\{\}]
+<?xml version="1.0" encoding="UTF-8"?>
+    <documento>
+        <referencia>DN 1/2024</referencia>
+        <tipologia>DN</tipologia>
+        <localPublicacao>2.ª Série</localPublicacao>
+        <numPublicacao>1</numPublicacao>
+        <dataPublicacao>2024-01-05</dataPublicacao>
+        <emissor>Gabinete do Secretário de Estado do Turismo, 
+            Comércio e Serviços (Ministério da Economia e Mar)
+        </emissor>
+        <sumario>Prorroga o prazo de apresentação de candidaturas ao 
+            concurso específico da Linha Interior + Turismo, aberto 
+            na sequência dos incêndios de 4 e 5 de agosto de 2023
+        </sumario>
+        <preambulo>ver diploma</preambulo>
+        <articulado>ver diploma</articulado>
+        <anexos>ver diploma</anexos>
+    </documento>
+\end{Verbatim}
+
+\section{Sumário}
+
+Ao longo deste capítulo, foram caraterizadas as tipologias de atos normativos que serão 
+consideradas neste trabalho conducente a uma prova de conceito.
+
+Já existe um formato aberto definido para o intercâmbio deste tipo de informação a nível europeu.
+Esse formato está especificado num XML Schema, por isso se adiantou com uma possível
+instância XML para cada um dos tipos de registo.
 

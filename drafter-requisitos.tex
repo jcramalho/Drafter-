@@ -5,31 +5,51 @@ Na proposta subjacente ao contrato ao abrigo do qual se redige este relatório, 
 Neste capítulo, contextualiza-se cada um deles de acordo com o protótipo (cap. \ref{prototipo}) instalado, parametrizado 
 e desenvolvido.
 
+Relativamente ao protótipo, era um requisito que este se baseasse na plataforma LEOS (\emph{"Legislation Editing Open Software"}).
+O LEOS tem já desenvolvidos e implementados muitos dos requisitos, carecendo de uma adaptação à realidade portuguesa.
+Ao longo deste capítulo, faz-se uma associação de cada um dos requisitos a uma ou mais funcionalidades da plataforma LEOS,
+indicando as parametrizações que será necessário fazer. Para os casos em que a associação não seja possível indicam-se as 
+funcionalidades a desenvolver.
+
 \section{Requisitos}
 
-Nas subsecções seguintes descrevem-se os conceitos associados a cada requisito bem como a sua implementação ou possível 
-implementação no protótipo.
-
-\subsection{Requisitos funcionais de alto nível}
-
-\begin{itemize}
-\item Deteção automática de cumprimento de normas de produção de atos normativos;
-\item Observação de interpretações firmadas em jurisprudência sobre normas;
-\item Apoio à elaboração de tarefas de avaliação normativa;
-\item Automatização dos processos de avaliação legislativa para textos preparados na plataforma;
-\item Verificação e validação das referências normativas e legais identificadas nos textos preparados
-na plataforma (verificação da existência das normas invocadas);
-\item Pesquisa e identificação automática de legislação e jurisprudência;
-\item Verificação semântica das normas invocadas.
-\end{itemize}
+Nas subsecções seguintes descrevem-se os conceitos associados a cada requisito, se estão ou não presentes no LEOS e,
+o que será preciso fazer caos não estejam.
 
 \subsection{Requisitos funcionais}
 
-\begin{itemize}
-\item Descrição dos workflows para a criação e gestão de atos normativos;
-\item (Possibilidade) Descrição destes processos em BPMN;
-\item (Possibilidade) Descrição do ciclo de vida dos documentos na plataforma.
-\end{itemize}
+Alguns destes requisitos estão relacionados com políticas sobre a adoção de normas e a criação de processos, no entanto,
+ao colocarmos o LEOS como base, algumas destas decisões já foram tomadas.
+
+\subsubsection{Deteção automática de cumprimento de normas de produção de atos normativos}
+
+O LEOS precisa de ser parametrizado com os modelos estruturais dos atos normativos que se pretendem criar.
+No capítulo anterior, apresentou-se uma análise prévia necessária à criação destes modelos. O passo seguinte, será 
+especificar esses modelos em XML numa linguagem específica desenvolvida para o efeito (\ref{???}).
+
+Esta especificação de cada um dos modelos pode e deve incluir os requisitos estruturais que devem ser observados na 
+produção de atos normativos. Ao fazê-lo, o LEOS ou outra plataforma que os venha a utilizar pode verificar automaticamente 
+o cumprimento dos requisitos/normas.
+
+\subsubsection{Observação de interpretações firmadas em jurisprudência sobre normas}
+
+\subsubsection{Apoio à elaboração de tarefas de avaliação normativa}
+
+\subsubsection{Automatização dos processos de avaliação legislativa para textos preparados na plataforma}
+
+\subsubsection{Verificação e validação das referências normativas e legais identificadas nos textos preparados
+na plataforma (verificação da existência das normas invocadas)}
+
+\subsubsection{Pesquisa e identificação automática de legislação e jurisprudência}
+
+\subsubsection{Verificação semântica das normas invocadas}
+
+\subsubsection{Descrição dos workflows para a criação e gestão de atos normativos}
+
+(Possibilidade) Descrição destes processos em BPMN
+
+(Possibilidade) Descrição do ciclo de vida dos documentos na plataforma.
+
 
 \subsection{Requisitos de interoperabilidade}
 

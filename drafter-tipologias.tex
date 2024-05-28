@@ -1,16 +1,17 @@
 \chapter{Tipologias de atos normativos}
 \label{tipologias}
 
-A plataforma que se pretende criar deverá ter modelos pré-criados para todas as tipologias de atos normativos 
+A plataforma que se pretende criar deverá ter modelos pré-criados ("\emph{templates}") para todas as tipologias de atos normativos 
 que se venham a suportar. 
 Um modelo de uma tipologia pressupõe a especificação estrutural dos documentos pertencentes a essa tipologia, 
-podendo também conter uma sugestão de texto a incluir nos vários elementos estruturais que a compoem.
+contendo também o texto de abertura legalmente definido a incluir nos vários elementos estruturais que a compõem.
 
-No contexto legístico português há dezenas de tipologias. No âmbito deste trabalho e devido a 
-restrições temporais, foi necessário reduzir a um subconjunto mas significativo e representativo do que se pretende.
+No contexto jurídico-normativo português há dezenas de tipologias. No âmbito deste trabalho e devido a 
+restrições temporais, foi necessário reduzir a um subconjunto, mas significativo e representativo 
+do que se pretende.
 
-Consultou-se a entidade adjudicante que designou como prioritárias a lei, o decreto-regulamentar, o decreto, 
-a portaria e o despacho normativo 
+Consultou-se a entidade adjudicante que designou como prioritárias a lei (a que a equipa jurídica acrescentou o "decreto-lei"),
+o decreto-regulamentar, o decreto, a portaria e o despacho normativo 
 (publicado na 2.a série do Diário da República) e, em certos casos, a resolução do Conselho de Ministros.
 
 \section{Metadados}
@@ -19,7 +20,7 @@ Depois de uma análise feita sobre vários documentos de cada uma destas tipolog
 de metadados, comuns a todas:
 
 \begin{description}
-    \item[referencia] - fórmula usualmente utilizada para identificar os diplomas; 
+    \item[referencia] - fórmula usualmente utilizada para identificar os diplomas. 
     Normalmente, os documentos dentro de uma tipologia 
     são referenciados por combinação de tipologia, número de série e ano;
     \item[tipologia] - designação da tipologia: \texttt{Lei}, \texttt{Decreto-lei}, etc;
@@ -28,7 +29,7 @@ de metadados, comuns a todas:
     \item[numPublicacao] - número de publicação, número atribuído sequencialmente 
     dentro do mesmo ano e da mesma tipologia;
     \item[dataPublicacao] - data de publicação do diploma;
-    \item[emissor] - entidade emissora; Pode ser a Assembleia da República, o Governo, 
+    \item[emissor] - entidade emissora: pode ser a Assembleia da República, o Governo, 
     a Presidência do Conselho de Ministros, um Ministério em Especial ou uma Secretaria 
     de Estado de algum Ministério;
     \item[sumario] - contém a indicação do assunto principal do diploma;
@@ -40,8 +41,8 @@ de metadados, comuns a todas:
 \end{description}
 
 No seguimento desta análise, referem-se exemplos reais de documentos nas tipologias selecionadas e apresentam-se 
-exemplos de como seriam os respetivos registos de metadados em XML. Escolhe-se o XML por ser um formato aberto,
-e por ser o formato a usar na plataforma a ser desenvolvida.
+exemplos de como seriam os respetivos registos de metadados em XML, partindo do que é exigido na Lei n.º 74/98. 
+Escolhe-se o XML por ser um formato aberto, e por ser o formato a usar na plataforma a ser desenvolvida.
 
 \section{Lei}
 
@@ -181,7 +182,7 @@ a estrutura pode ser expandida.
 Um documento desta tipologia pode ser definido como um ato legislativo, diploma do Governo, no exercício 
 da sua função legislativa, ao abrigo do artigo 198.º da Constituição da República Portuguesa.
 
-Os decretos-lei têm o seguinte formulário:
+Os decretos-leis obedecem ao seguinte formulário:
 
 \begin{description}
     \item[Decretos-leis previstos na alínea a) do n.º 1 do artigo 198.º da Constituição]: 
@@ -246,7 +247,7 @@ Um documento desta tipologia pode ser definido como um Diploma do Governo que vi
 os acordos internacionais, ao abrigo do artigo 197.º, n.º 1, al. c), da Constituição da 
 República Portuguesa.
 
-Os decretos têm o seguinte formulário:
+Os decretos obedecem ao seguinte formulário:
 
 \begin{quoting}
     Nos termos da alínea c) do n.º 1 do artigo 197.º da Constituição, o Governo aprova 
@@ -278,13 +279,13 @@ O seu registo de metadados teria a seguinte extrutura em XML:
 \end{Verbatim}
 
 
-\section{Decreto-Regulamentar}
+\section{Decreto-regulamentar}
 
 Um documento desta tipologia pode ser definido como um Regulamento. É um diploma do Governo, 
 no exercício da sua função administrativa, ao abrigo dos artigos 199.º, als. c) ou g), e 
 112.º, n.º 6 . É pouco comum.
 
-Os decretos-regulamentares têm o seguinte formulário:
+Os decretos-regulamentares obedecem ao seguinte formulário:
 
 \begin{quoting}
     Nos termos da alínea c) do artigo 199.º da Constituição e... 
@@ -320,10 +321,10 @@ O seu registo de metadados teria a seguinte extrutura em XML:
 \section{Resolução do Conselho de Ministros}
 
 Um documento desta tipologia pode ser definido como uma resolução emanada quando 
-o Governo reúne em plenário, concretiza-se o Conselho de Ministros. 
+o Governo reúne em plenário, ou seja, em Conselho de Ministros. 
 É um ato normativo do Governo no exercício da sua função administrativa.
 
-As Resoluções do Conselho de Ministros têm o seguinte formulário:
+As Resoluções do Conselho de Ministros obedecem ao seguinte formulário:
 
 \begin{quoting}
     Nos termos da alínea... do artigo 199.º da Constituição, o Conselho de Ministros 
@@ -368,7 +369,7 @@ Um documento desta tipologia pode ser definido como um diploma do Governo,
 no exercício da sua função administrativa. 
 É muito comum que a própria lei determine a sua execução mediante portaria.
 
-As Portarias têm o seguinte formulário:
+As Portarias obedecem ao seguinte formulário:
 
 \begin{quoting}
     Manda o Governo, pelo... (indicar o membro ou membros competentes), 
@@ -405,7 +406,7 @@ O seu registo de metadados teria a seguinte extrutura em XML:
 Um documento desta tipologia pode ser definido como um diploma do Governo, 
 no exercício da sua função administrativa. 
 
-Os Despachos Normativos têm o seguinte formulário:
+Os Despachos Normativos obedecem ao seguinte formulário:
 
 \begin{quoting}
     (Inicia por identificar o acto legislativo que lhe serve de base.)

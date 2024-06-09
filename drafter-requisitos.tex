@@ -31,8 +31,8 @@ ao colocarmos o LEOS como base, algumas destas decisões já foram tomadas e par
 O LEOS precisa de ser parametrizado com os modelos estruturais dos atos normativos que se pretendem criar.
 No capítulo anterior, apresentou-se uma análise prévia necessária à criação destes modelos. 
 O passo seguinte, será 
-especificar esses modelos em XML numa linguagem específica desenvolvida para o efeito (\cite{akoma-ntoso}).
-Apresentam-se exemplos mais à frente \ref{???}.
+especificar esses modelos em XML numa linguagem específica desenvolvida para o efeito \cite{VPCB2018}.
+Apresentam-se exemplos no capítulo referente à configuração da plataforma \ref{modelos}.
 
 Esta especificação de cada um dos modelos pode e deve incluir os requisitos estruturais que devem ser observados na 
 produção de atos normativos. Ao fazê-lo, o LEOS ou outra plataforma que os venha a utilizar pode verificar automaticamente 
@@ -40,30 +40,109 @@ o cumprimento dos requisitos/normas.
 
 \subsubsection{Observação de interpretações firmadas em jurisprudência sobre normas}
 
-Pedir esclarecimentos.
+Este requisito pressupõe a verificação de algumas condições estruturais e semânticas.
+As condições estruturais podem e devem estar refletidas no modelo criado em AKN (\ref{akn}) para a tipologia.
+As condições semânticas podem ser divididas em duas: estáticas e dinâmicas.
+Ambas terão de ser especificadas no momento da definição do modelo para a tipologia. 
+A semântica estática pode ficar definida no modelo em AKN ou ainda numa estensão a este modelo criada na plataforma LEOS.
+A semântica dinâmica, depende de valores que serão introduzidos aquando da criação do documento e a sua verificação terá 
+de ser garantida usando uma linguagem extra de regras ou materializadas no código da aplicação.
 
 \subsubsection{Apoio à elaboração de tarefas de avaliação normativa}
 
-Pedir esclarecimentos.
+As tarefas de avaliação normativa pretendem avaliar o impacto da nova legislação que está a ser criada.
+É algo externo ao ato normativo e para o qual é necessário a interpretação e análise humana.
+O apoio será no registo da informação que possa conduzir a um valor final de impacto. 
+
+O LEOS não possui qualquer suporte à elaboração destas tarefas.
+Para isso, será necessário desenvolver um componente de raiz, que poderá estar integrado no LEOS ou comunicar com este 
+sendo um serviço externo.
+
+O desenvolvimento deste componente carece de uma especificação cuidada de requisitos.
 
 \subsubsection{Automatização dos processos de avaliação legislativa para textos preparados na plataforma}
 
-Pedir esclarecimentos.
+Relacinonado com o ponto anterior. Estas funcionalidades deverão fazer parte do novo componente a desenvolver.
 
 \subsubsection{Verificação e validação das referências normativas e legais identificadas nos textos preparados
 na plataforma (verificação da existência das normas invocadas)}
 
+Como já foi referido em cima, para o cumprimento deste requisito é necessário dispôr de uma base de dados com a 
+produção jurídico-normativa de Portugal.
+
+Para isso, é necessário garantir a adoção de várias regras/normas:
+
+\begin{itemize}
+    \item É preciso garantir uma forma única de referenciar os atos normativos, seja ela o ELI 
+    ("\emph{European Legislation Identifier}") \cite{ELI}, ou simplesmente aquilo a que estamos habituados em Portugal, ou 
+    seja, uma referência composta por tipologia, número de série e ano; 
+
+    \item Garantir a presença \emph{online}, de um repositório de atos normativos permanentemente atualizado e acessível;
+    \item Ter uma API ("\emph{Application Program Interface}") bem definida sobre o repositório anterior que permita a 
+    integração automática e a interoperabilidade com outros sistemas, por exemplo, o que se pretende desenvolver.
+\end{itemize}
+
+Devido a inexistência destas normas, podemos avançar com um pequeno protótipo próprio mas que terá sempre as desvantagens de 
+estar fora dos canais oficiais e de sofrer de permanente desatualização.
 
 
 \subsubsection{Pesquisa e identificação automática de legislação e jurisprudência}
 
+Os requisitos descritos no ponto anterior são também válidos neste ponto.
+Havendo um repositório de legislação que obedeça a um conjunto de regras transversais, basta incluir uma funcionalidade de 
+pesquisa na sua API.
+
+Relativamente à jurisprudência, a situação é semelhante à da legislação, é necessário garantir a adoção de várias regras/normas:
+
+\begin{itemize}
+    \item É preciso garantir uma forma única de referenciar os processos. Para isto já existe o ECLI 
+    ("\emph{European Case Law Identifier}") \cite{ECLI}. É preciso promover/decretar a sua adoção à escala nacional; 
+
+    \item Garantir uma normalização a nível dos metadados à escala nacional, todas as instituições produtoras de 
+   jurisprudência deverão produzi-la na mesma forma, o que não se passa atualmente;
+
+    \item Garantir a presença \emph{online}, de um repositório de jurisprudência permanentemente atualizado e acessível;
+
+    \item Ter uma API ("\emph{Application Program Interface}") bem definida sobre o repositório anterior que permita a 
+    integração automática e a interoperabilidade com outros sistemas, por exemplo, o que se pretende desenvolver.
+\end{itemize}
+
+À semelhança do ponto anterior, devido a inexistência destas normas, podemos avançar com um pequeno protótipo próprio mas que terá sempre as desvantagens de 
+estar fora dos canais oficiais e de sofrer de permanente desatualização.
+
 \subsubsection{Verificação semântica das normas invocadas}
+
+Para suportar este requisito será preciso ir mais além da criação dos modelos AKN para as tipologias.
+Será necessário criar um modelo semântico para cada uma, aquilo que se designa por ontologia.
+
+Neste contexto, uma ontologia pode definir-se como uma especificação formal de conhecimento de um determinado domínio bem 
+caraterizado e que inteligível quer para máquinas quer para humanos.
+
+Há várias linguagens que permitem a criação de ontologias com níveis diferentes de aplicabilidade.
+Aquela que melhor se adapta à complexidade do contexto jurídico-normativo é a "\emph{Ontology Web Language} (OWL)" 
+\cite{owl,owl2}.
+
+A OWL é uma linguagem de anotação desenhada para especificar semântica, publicar e partilhar dados. 
+Foi desenvolvida pelo \emph{World Wide Web Consortium} (W3C).
+
+Um ontologia OWL é um conjunto de conceitos, seus atributos e relações entre eles. 
+Adicionalmente, permite a especificação de regras semânticas via axiomas.
+
+As ontologias são uma maneira de modelar o conhecimento de forma estruturada, permitindo que diferentes sistemas 
+compreendam e usem esses dados de forma interoperável.
+
+A linguagem OWL é baseada em \emph{Description Logic} (DL), que fornece uma base formal para o raciocínio automatizado. 
+Isso significa que a partir de uma ontologia de base a máquina consegue inferir novos fatos a partir dos dados existentes, 
+aumentar automaticamente o seu conhecimento e com isso 
+melhorar a busca de informação e facilitar a integração de dados de diversas fontes.
+A linguagem tem vários níveis de complexidade deixando a quem a utiliza a decisão de qual o nível que pretende usar. 
+Desta forma, pode-se dizer que tudo se pode especificar em OWL.
 
 \subsubsection{Descrição dos workflows para a criação e gestão de atos normativos}
 
-(Possibilidade) Descrição destes processos em BPMN
-
-(Possibilidade) Descrição do ciclo de vida dos documentos na plataforma.
+O Ministério da Justiça possui já uma ferramenta própria para automatização de workflows. 
+Se for possível colocar o novo sistema a dialogar com essa ferramenta consegue-se cumprir este requisito e 
+poupar imenso tempo de desenvolvimento.
 
 
 \subsection{Requisitos de interoperabilidade}
@@ -78,13 +157,12 @@ A nossa Administração Pública (AP) definiu um modelo para a interoperabilidad
 \begin{itemize}
 \item Neste contexto, a interoperabilidade consiste na capacidade das organizações interagirem 
 e agirem em prol de benefícios comuns, através de comunicação e partilha de informação e conhecimento;
-\item O modelo foi baseado na \emph{Framework Europeia de Interoperabilidade}, criada pela Comissão Europeia;
+\item O modelo foi baseado na \emph{Framework Europeia de Interoperabilidade} \cite{EIF}, criada pela Comissão Europeia;
 \item Está organizado em quatro camadas: legal, organizacional, técnica e semântica.
 \end{itemize}
 
 Apesar de independentes, as quatro camadas são interdependentes, sendo que para se conseguir atingir a interoperabilidade 
 semântica, as outras terão de estar contempladas (neste projeto é importante atingir o patamar semântico).
-
 
 \begin{itemize}
 \item Integração com fontes primárias fundamentais, designadamente bases de dados, com toda a

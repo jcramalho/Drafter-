@@ -1,5 +1,9 @@
 \chapter{Protótipo/Prova de Conceito}
 \label{prototipo}
+
+Neste capítulo, descrevem-se os trabalhos conducentes à criação da prova de conceito do sistema a desenvolver. 
+Começa-se com uma pequena introdução contextual para logo entrar nos detalhes técnicos.
+
 \section{Introdução}
 
 Além dos relatórios produzidos, será desenvolvida uma prova de conceito, a uma escala
@@ -46,3 +50,216 @@ Tudo isso para garantir que o autor se possa focar na elaboração do texto e mu
 Para facilitar a colaboração online eficiente, o LEOS também possui outros recursos como comentários, sugestões, 
 controle de versão, edição colaborativa, etc.
 
+
+\section{Stack Tecnológica}
+
+O LEOS é um ecossitema de serviços relativamente complexo que se passa a descrever.
+
+\subsection{Frontend: interface com o utilizador}
+
+O frontend da plataforma LEOS foi construído usando a framework Vaadin 8 e o AngularJS. 
+
+O Vaadin \footnote{\url{https://vaadin.com/vaadin-8}} é uma framework Java usada para a criação de interfaces Web. 
+Esta framework permite gerar vários componentes UI (\emph{"User Interface"}) usando código em JAVA.
+A versão 8 em específico foi descontinuada em 21 de Fevereiro, 2022. 
+Esta versão já não recebe suporte por quem a desenvolveu e mantinha.
+
+No desenvolvimento do sistema português é preciso acautelar esta situação.
+Confirmar junto da equipa de desenvolvimento do LEOS quais os planos para a substituição deste componente ou, em caso 
+da inexistência desses planos prever o seu desenvolvimento numa tecnologia atual.
+
+O AngularJS \footnote{\url{https://angularjs.org/}} é uma framework JavaScript que permite criar interfaces visuais reativas. 
+No LEOS utilizou-se esta framework para se desenvolver o cliente de anotações.
+
+
+\subsection{Backend}
+
+O backend da Plataforma LEOS consiste numa aplicação criada com a framework Spring \footnote{\url{https://spring.io/projects/spring-boot}}. 
+Esta framework, desenvolvida em JAVA, é reconhecida pela sua estabilidade e fácil manutenção.
+
+De modo a estabelecer a conexão com a base de dados, a aplicação Spring utiliza o módulo Spring Data JPA \footnote{\url{https://spring.io/projects/spring-data-jpa}}. 
+Este módulo cria uma camada de abstração sobre a API de persistência do JAVA (JPA), permitindo armazenar e recuperar 
+informação de bases de dados relacionais eficientemente.
+
+Para permitir criar abstrações da base de dados, o LEOS usa o Hibernate.
+O Hibernate\footnote{\url{https://hibernate.org/}} é uma framework de \emph{"object-relational mapping"} (ORM) para a linguagem Java. 
+Esta framework permite realizar o mapeamento entre os modelos orientados a objetos e as bases de dados relacionais tornando 
+transparente para o programador a sua implementação.
+
+Para servir o backend, o LEOS utiliza um servidor web Apache Tomcat para receber e responder aos pedidos HTTP. 
+O apache Tomcat é também um Servlet container para aplicações java. 
+Na plataforma LEOS, este servidor é responsável por servir a aplicação Spring.
+
+Por último, a framework Mockito\footnote{\url{https://site.mockito.org/}} é utilizada para a realização de testes unitários 
+para a linguagem de programação JAVA.
+
+\subsection{Persistência}
+ 
+O LEOS utiliza uma base de dados relacional para guardar toda a informação necessária ao seu funcionamento normal. 
+Estas informações incluem dados relacionados com utilizadores, configurações, metadados de documentos, etc. 
+Por omissão, é utilizada a base de dados H2\footnote{\url{https://www.h2database.com/html/main.html}} cujas caraterísticas 
+principais são ser rápida, fácil de usar, de dimensão pequena, poder ser instanciada num servidor ou em memória e 
+poder ser gerida via web.
+
+O LEOS guarda as anotações aos documentos numa base de dados à parte. 
+Por omissão, é utilizada uma base de dados H2 em memória.
+
+Além da H2, LEOS utiliza um servidor CMIS\footnote{\url{https://www.oasis-open.org/standard/cmisv1-1/}} 
+(\emph{"Content Management Interoperability Services"}) para guardar documentos. 
+CMIS é um standard OASIS que permite partilha de informação entre diferentes sistemas de gestão de informação. 
+De modo a criar este servidor o LEOS utiliza a  ferramenta OpenCMIS do projeto Apache Chemistry.
+
+\subsection{Sumário}
+
+Concluindo, o LEOS assenta num conjunto de tecnologias diversos, com alguma complexidade e com alguns 
+riscos associados identificados em cima: Vaadin 8, AngularJS, JAVA Spring, Spring Data JPA, Hibernate, Apache Tomcat,
+Mockito, H2 e CMIS.
+
+\section{Configuração do idioma: português}
+
+O LEOS foi desenvolvido utilizando a norma \texttt{i18n}.
+
+A internacionalização (i18n) é o processo de projetar e desenvolver um produto de software para que possa ser adaptado para 
+utilizadores de diferentes culturas e idiomas.
+
+A internacionalização não envolve apenas permitir diferentes idiomas, mas também adaptar o software para aceitar diferentes 
+formas de dados e configurações para corresponder aos costumes locais e processá-los corretamente.
+
+O Grupo W3C define a internacionalização como:
+\begin{quoting}
+A internacionalização é o design e o desenvolvimento de um produto, aplicação ou conteúdo que permite fácil 
+adaptação a públicos-alvo de cultura, região ou idioma diferentes.
+\end{quoting}
+
+
+
+Neste contexto, o LEOS é facilmente adaptável a utilizadores de culturas e línguas diferentes. 
+
+Esta norma garante que os dados associados às traduções da plataforma ficam separados do código principal, 
+tornando o processo de adaptação do LEOS para novas línguas flexível e eficiente.
+
+Para se configurar o idioma português para o LEOS foi necessário criar um novo ficheiro JSON com as traduções portuguesas dos 
+textos da interface gráfica do LEOS. 
+
+Na pasta \verb|\leos\modules\ui-angular\src\assets\i18n\| já se encontram ficheiros JSON para a lingual Inglesa e Francesa. 
+Para gerar a versão Portuguesa, traduziu-se automaticamente todas os textos contidos no ficheiro original em Inglês 
+(\texttt{en.json}), 
+um processo seguido de revisão manual. 
+Desta forma foi criado o ficheiro \texttt{pt.json}, o qual foi depois colocado na mesma pasta que os originais.
+
+De seguida, foi necessário alterar o ficheiro de configuração presente na pasta \\
+\verb|\leos\modules\ui-angular\src\config\global.ts|, de modo a incluir o ficheiro com traduções portuguesas no LEOS. 
+Esta configuração consistiu em adicionar a string \texttt{"pt"} à lista das \emph{languages}, que faz parte do objeto i18n. 
+Foi ainda alterado o atributo \texttt{defaultLanguage} de "en" para "pt", no entanto, esta alteração não demonstrou qualquer 
+alteração no comportamento do sistema, dado que o inglês continuou a ser a língua por omissão.
+
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\scriptsize]
+i18n: {
+    i18nService: {
+      defaultLanguage: 'pt',
+      languages: ['pt', 'en', 'fr'],
+    }, ... 
+ },
+\end{Verbatim}
+
+
+\section{Modelos/Templates}
+
+\subsection{Adição de novos modelos}
+
+De momento, a criação de novos modelos para a plataforma LEOS é um processo manual sendo necessário a edição/criação de vários 
+ficheiros e a sua colocação em locais estratégicos da plataforma.
+
+Vai-se exemplificar este processo com um caso de estudo simples de uma lei.
+Ou seja, assuma-se que se pretende gerar um novo modelo para um ato normativo com a tipologia de Lei.
+ 
+No LEOS, os modelos de atos normativos são representados no formato \texttt{Akoma Ntoso (AKN)} já apresentado anteriromente. 
+Desta forma, e para iniciar o processo, é necessário gerar um ficheiro no formato AKN para representar a estrutura de uma Lei. 
+De momento o LEOS não fornecesse qualquer ferramenta para gerar este tipo de ficheiros pelo que estes têm de ser gerados 
+manualmente.
+
+Depois de gerado, o ficheiro AKN deve ser colocado na pasta dos modelos do LEOS: 
+\texttt{\url{LEOS_dir/tools/repositor/server/src/main/resources/leos/templates}}.
+
+Cada modelo associado a um dado ato normativo deve ser acompanhado de um outro ficheiro modelo para gerar a página de capa 
+desse ato normativo. Este segundo ficheiro também deve ser colocado na pasta dos modelos.
+ 
+A seguir é necessário adicionar uma nova entrada, para cada modelo, em duas tabelas da base de dados (do LEOS) 
+para que o LEOS consiga aceder aos novos modelos.
+
+A título de exemplo, eis as \emph{queries} SQL para um novo modelo:
+
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\scriptsize, commandchars=\\\{\}]
+    INSERT INTO CONFIG (NAME,OBJECT_ID,AUDIT_C_BY,AUDIT_C_DATE,
+                AUDIT_LAST_M_BY,AUDIT_LAST_M_DATE,LANGUAGE,CATEGORY_ID) 
+            VALUES ('LEI-01','0','admin/admin',
+                   to_timestamp('22-01-21 08:25:40.328000000',
+                   'DD-MM-RR HH24:MI:SSXFF'),'admin/admin',
+                   to_timestamp('22-01-21 08:25:40.328000000',
+                   'DD-MM-RR HH24:MI:SSXFF'),'PT',
+                   (SELECT id from CONFIG_CATEGORIES WHERE 
+                     CATEGORY_CODE='TEMPLATE_BILL'));
+\end{Verbatim}
+
+e
+
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\scriptsize, commandchars=\\\{\}]
+    INSERT INTO CONFIG_VERSION (CONFIG_ID,VERSION_LABEL,VERSION_SERIES_ID,
+        VERSION_TYPE,IS_LATEST_MAJOR_VERSION,IS_LATEST_VERSION,
+        IS_MAJOR_VERSION,IS_VERSION_SERIES_CHECKED_OUT,AUDIT_C_BY,
+        AUDIT_C_DATE,AUDIT_LAST_M_DATE,AUDIT_LAST_M_BY,IS_IMMUTABLE) 
+      VALUES ((SELECT id from CONFIG WHERE NAME='LEI-01'),'1.0','1',null,1,1,
+        1,0,'admin/admin',to_timestamp('30-03-23 07:38:37.451000000',
+        'DD-MM-RR HH24:MI:SSXFF'),to_timestamp('30-03-23 07:38:37.496000000',
+        'DD-MM-RR HH24:MI:SSXFF'),'admin/admin',0);
+\end{Verbatim}
+
+Para finalizar a configuração, é necessário editar o ficheiro \texttt{catalog.xml}, 
+presente na mesma pasta dos modelos, de modo a adicionar os modelos gerados ao catálogo de modelos 
+para que estes fiquem disponíveis no LEOS. 
+Este ficheiro define a estrutura em árvore apresentada no auxiliar de criação de documentos. 
+É aqui que devemos colocar a referência do novo modelo para que ele seja visível na árvore (fig.\ref{fig-catalog}).
+
+\figura{fig-catalog}{./imagens/catalog2.png}{LEOS: árvore de tipologias disponíveis}{width=10cm}
+  
+Exemplo:
+ 
+\begin{Verbatim}[frame=single, numbers=left, fontsize=\scriptsize, commandchars=\\\{\}]
+<?xml version="1.0" encoding="UTF-8" ?>
+<catalog lang="PT">
+    <item type="CATEGORY" id="c1" enabled="true" key="LAW_INITIATIVE">
+        <names>
+            <name lang="PT">Atos Normativos</name>
+        </names>
+        <item type="CATEGORY" id="c1.1" enabled="true" 
+              key="ATOS_NORMATIVOS">
+            <names>
+                <name lang="PT">Lei</name>
+                <name lang="EN">Law</name>            </names>
+            <item type="TEMPLATE" id="LEI-PR-01;LEI-01" enabled="true" 
+                  key="lei-01">
+                <names>
+                    <name lang="PT">01 - Modelo de Lei</name>
+                    <name lang="EN">01 – Law Template</name>
+                </names>
+                <languages>
+                    <language lang="PT">Portuguese</language>
+                    <language lang="EN">English</language>
+                </languages>
+            </item>
+        </item>
+    </item>
+    ... 
+</catalog>
+\end{Verbatim} 
+
+
+\section{Interface}
+
+Nesta secção, apresentam-se vários exemplos da interface do LEOS configurada para a realidade portuguesa.
+
+Criaram-se modelos muito simples para as tipologias de atos normativos apenas para efeitos de exemplificação.
+ 
+\figura{fig-catalog}{./imagens/leos_lista02.png}{LEOS: resultados da pesquisa de propostas}{width=15cm}
+
+\figura{fig-catalog}{./imagens/leos_lei.png}{LEOS: modelo de uma lei na plataforma}{width=10cm}

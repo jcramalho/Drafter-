@@ -40,6 +40,9 @@ de metadados, comuns a todas:
     ou outros elementos gráficos ou quantitativos referidos no articulado.
 \end{description}
 
+Na implementação futura deste projeto, sugere-se o cruamento deste levantamento de informação com o conjunto de normas 
+publicado pela Assembleia da República para a produção de atos normativos \cite{GuiaLegistica2019}.
+
 No seguimento desta análise, referem-se exemplos reais de documentos nas tipologias selecionadas e apresentam-se 
 exemplos de como seriam os respetivos registos de metadados em XML, partindo do que é exigido na Lei n.º 74/98. 
 Escolhe-se o XML por ser um formato aberto, e por ser o formato a usar na plataforma a ser desenvolvida.
@@ -92,7 +95,7 @@ O seu registo de metadados teria a seguinte extrutura em XML:
 
 Este documento XML, foi criado apenas para dar uma visão minimalista dos metadados num formato inteligível quer 
 para a máquina quer para o humano. Na plataforma final, estes documentos terão de estar no formato 
-\texttt{Akoma Ntoso} \cite{akoma-ntoso}.
+\texttt{Akoma Ntoso} \cite{VPCB2018}, introduzido mais à frente (\ref{akn}).
 É um formato que traz mais alguma complexidade pois prevê a interoperabilidade internacional desta informação.
 A título de exemplo, apresenta-se uma possível versão do documento acima neste formato.
 
@@ -136,12 +139,17 @@ A título de exemplo, apresenta-se uma possível versão do documento acima nest
           </TLCOrganization>
         </references>
       </meta>
-      <body>
+      <preface xml:id="_preface">
+            Justificação para a elaboração do ato normativo.
+      </preface>
+      <preamble xml:id="_preamble">
         <preamble>
-          <p>A Assembleia da República decreta, nos termos da alínea c) 
-            do artigo 161.º da Constituição, para valer como lei geral da 
-            República, o seguinte:</p>
+            <p>A Assembleia da República decreta, nos termos da alínea c)
+                do artigo 161.o da Constituição, para valer como lei geral da
+                República, o seguinte:</p>
         </preamble>
+      </preamble>
+      <body>
         <article>
           <heading>Articulado</heading>
           <p>ver diploma</p>
@@ -165,7 +173,7 @@ Explicação da estrutura:
 \item[FRBRExpression]: Representa a expressão da obra, incluindo a data e idioma da publicação;
 \item[FRBRManifestation]: Representa a manifestação física ou digital da expressão da obra;
 \item[publication]: Detalhes da publicação, como série, número e data;
-\item[preface]: Contém o preâmbulo do documento;
+\item[preface]: Contém a razão de ser do documento;
 \item[preamble]: O texto do preâmbulo;
 \item[body]: Corpo principal do documento, dividido em seções;
 \item[section]: Seções do documento, como sumário, articulado e anexos;
@@ -441,10 +449,11 @@ O seu registo de metadados teria a seguinte extrutura em XML:
 
 
 \section{Akoma Ntoso XML}
+\label{akn}
 
-Akoma Ntoso (Arquitetura para Gestão Orientada ao Conhecimento de Textos Normativos Africanos usando Padrões Abertos e Ontologias) 
+Akoma Ntoso (Arquitetura para uma Gestão Orientada ao Conhecimento de Textos Normativos Africanos usando Normas Abertas e Ontologias) 
 é uma norma técnica internacional para representar documentos executivos, legislativos e judiciais de maneira estruturada, 
-utilizando um vocabulário XML específico do domínio.
+utilizando um vocabulário XML específico do domínio (\cite{VPCB2018}).
 
 O termo \texttt{akoma ntoso} significa "corações ligados" na língua Akan da África Ocidental e, por essa razão, foi escolhido 
 para designar esta norma XML. A sigla usada normalmente para designar este formato é \texttt{AKN}.
@@ -474,7 +483,7 @@ Oferece uma capacidade descritiva extensiva aos vários tipos de documentos legi
 baseada no modelo Requisitos Funcionais para Registros Bibliográficos (FRBR). 
 Isso garante que cada documento possa ser identificado e referenciado de forma única, facilitando a gestão e a recuperação.
 
-\item[Definição do \texttt{MIME TYPE}]: Esta especifica o \texttt{MIME TYPE} apropriado para documentos Akoma Ntoso, 
+\item[Definição do \texttt{MIME TYPE}]: Esta especifica o \texttt{MIME TYPE} (\cite{Freed2012}) apropriado para documentos Akoma Ntoso, 
 garantindo que sejam corretamente reconhecidos e processados por navegadores web e outros sistemas de software (\texttt{MIME TYPE} 
 é um vocabulário controlado internacional para a classificação de tipos de ficheiros).
 
@@ -487,48 +496,56 @@ e acessíveis, facilitando a transparência e a eficiência nos processos legais
 \subsection{História e adoção a nível mundial}
 
 O AKN teve o seu início num projeto da \emph{"United Nations Department of Economic and Social Affairs"} (UNDESA) 
-em 2004[8] dentro da iniciativa "Fortalecimento dos Sistemas de Informação dos Parlamentos na África"[9]. 
+em 2004 \cite{Barabucci2010} dentro da iniciativa "Fortalecimento dos Sistemas de Informação dos Parlamentos na África"
+\cite{NairobiDeclaration2005}. 
 
 O seu vocabulário principal foi criado principalmente por dois professores do Centro de Pesquisa em História, Filosofia e 
 Sociologia do Direito e em Ciência da Computação e Direito (CIRSFID) da Universidade de Bolonha. 
-Um primeiro editor de texto legislativo suportando o Akoma Ntoso foi desenvolvido em 2007 com base no OpenOffice[10].
+Um primeiro editor de texto legislativo suportando o Akoma Ntoso foi desenvolvido em 2007 com base no OpenOffice 
+\cite{Buie2012}.
 
-Em 2010, o Parlamento Europeu desenvolveu uma aplicação web de código aberto chamada AT4AM[11][12] baseada no AKN[13] 
-para facilitar a produção e a gestão de emendas legislativas[14][15]. 
+Em 2010, o Parlamento Europeu desenvolveu uma aplicação web de código aberto chamada AT4AM \cite{Europarl2013, Bundestag2020} 
+baseada no AKN \cite{VoxPopuLII} 
+para facilitar a produção e a gestão de emendas legislativas \cite{AT4AMVideo, AT4AMWorld}. 
 Graças a este projeto, a aplicação do AKN pôde ser estendida para novos tipos de documentos (por exemplo, 
 proposta legislativa, transcrição) e para outros cenários (por exemplo, processo de tradução multilíngue).
 
-O AKN também foi explicitamente projetado para ser compatível com o CEN Metalex[16], uma das outros normas legislativas 
-mais populares[17], que é usado no Banco de Dados de Leis do Reino Unido[18][19].
+O AKN também foi explicitamente projetado para ser compatível com o CEN Metalex \cite{CENMetaLex}, 
+uma das outras normas legislativas 
+mais populares \cite{AkomaNtosoUpdates2010}, que é usado na base de dados de leis do Reino Unido.
 
 Em 2012, as especificações do AKN tornaram-se a base principal de trabalho para as atividades do Comitê Técnico 
-\texttt{LegalDocML} dentro da seção de membros \texttt{LegalXML} da OASIS[20].
+\texttt{LegalDocML} dentro da seção de membros \texttt{LegalXML} da OASIS \cite{OASISLegalDocML}.
 
-O esquema "United States Legislative Markup" (USLM)[21] para o Código dos Estados Unidos (as leis codificadas dos EUA), 
-desenvolvido em 2013, e o esquema LexML Brasil para documentos legislativos e judiciais brasileiros, desenvolvido anteriormente, 
-em 2008, foram ambos projetados para serem consistentes com o AKN[22][23].
+A norma "United States Legislative Markup" (USLM) \cite{USLMGuide2013} para o Código dos Estados Unidos (as leis codificadas dos EUA), 
+desenvolvido em 2013, e o esquema LexML Brasil para documentos legislativos e judiciais brasileiros \cite{LexMLBrasil2008}, 
+desenvolvido anteriormente, 
+em 2008, foram ambos projetados para serem consistentes com o AKN.
 
 Os Arquivos Nacionais do Reino Unido converteram toda a legislação para AKN em 2014. 
 A disponibilidade da legislação em acesso aberto \emph{"moveu a classificação do Reino Unido de quarto para primeiro lugar no Índice Global 
-de Dados Abertos de 2014, para a legislação"}[26].
+de Dados Abertos de 2014, para a legislação"} \cite{OGPUKNAP2015}.
 
-O Senado da República Italiana fornece, desde julho de 2016, todos os projetos de lei em AKN num repositório de dados abertos[27].
+O Senado da República Italiana fornece, desde julho de 2016, 
+todos os projetos de lei em AKN num repositório de dados abertos \cite{AkomaNtosoBulkData2016}.
 
 O Ministério Federal do Interior da Alemanha iniciou o projeto Elektronische Gesetzgebung ("Legislação Eletrônica") 
-em 2015/2016[28] e publicou a Versão 1.0 do perfil de aplicação alemão "LegalDocML.de" em março de 2020[29][30]. 
+em 2015/2016 \cite{EGesetzgebung} e publicou a Versão 1.0 do perfil de aplicação alemão "LegalDocML.de" em março de 2020
+\cite{LegalDocMLDE, Flatt2022}. 
 O objetivo do projeto é digitalizar todo o ciclo legislativo, desde a redação até a publicação. 
 A Alemanha decidiu adotar uma abordagem de desenvolvimento orientada a modelos para criar e fornecer um perfil de 
 aplicação baseado em subschemas, a fim de garantir a interoperabilidade entre atores organizacionalmente independentes, 
-cada um com seus respectivos ambientes e ferramentas de TI[12]. 
+cada um com seus os respectivos ambientes e ferramentas de TI. 
 Nesta versão inicial, o LegalDocML.de cobre projetos de lei na forma de leis, regulamentos e diretrizes administrativas gerais. 
 Como parte de um processo de desenvolvimento contínuo, a norma pode ser expandida incrementalmente em estágios futuros para 
-incluir todos os tipos de documentos relevantes dos processos parlamentares, legislativos e de promulgação e ferramentas[31].
+incluir todos os tipos de documentos relevantes dos processos parlamentares, legislativos e de promulgação e ferramentas.
 
-O Comitê de Alto Nível para Gestão (HLCM), parte do Conselho dos Chefes Executivos do Sistema das Nações Unidas para Coordenação, 
-criou um Grupo de Trabalho sobre Padrões de Documentos que aprovou, em abril de 2017, a adoção do AKN como norma 
-para especificação dos modelos da sua documentação[32].
+O Comitê de Gestão de Alto Nível  (HLCM), parte do Conselho dos Chefes Executivos do Sistema das Nações Unidas para Coordenação, 
+criou um Grupo de Trabalho sobre Normas de Documentos que aprovou, em abril de 2017, a adoção do AKN como norma 
+para especificação dos modelos da sua documentação.
 
-O AKN, na versão 1.0, foi finalmente adotado como padrão da OASIS no âmbito do LegalDocML em agosto de 2018[33].
+O AKN, na versão 1.0, foi finalmente adotado como padrão da OASIS no âmbito do LegalDocML em 
+agosto de 2018 \cite{AkomaNtosoStandard2020}.
 
 Abordaremos mais à frente, na parametrização do protótipo com modelos AKN, a parte mais técnica desta norma.
 
@@ -538,7 +555,7 @@ Ao longo deste capítulo, foram caraterizadas as tipologias de atos normativos q
 consideradas neste trabalho conducente a uma prova de conceito.
 
 Já existe um formato aberto definido para o intercâmbio deste tipo de informação a nível mundial 
-(Akoma Ntoso XML\footnote{\url{https://www.oasis-open.org/standard/akn-v1-0/}}, 
+(Akoma Ntoso XML\footnote{\url{https://www.oasis-open.org/standard/akn-v1-0/} (\cite{AkomaNtoso2018})}, 
 uma norma OASIS\footnote{\url{https://www.oasis-open.org/org/}} para documentos legislativos), que se apresentou aqui.
 
 Além disso, o protótipo descrito mais à frente é configurável com modelos especificados em AKN e este será o formato de 

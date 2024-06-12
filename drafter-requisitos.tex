@@ -38,6 +38,10 @@ Esta especificação de cada um dos modelos pode e deve incluir os requisitos es
 produção de atos normativos. Ao fazê-lo, o LEOS ou outra plataforma que os venha a utilizar pode verificar automaticamente 
 o cumprimento dos requisitos/normas.
 
+A linguagem definida pela comunidade para ser usada neste tipo de plataformas, o AKN (\ref{akn}), permite 
+ir além dos requisitos estruturais podendo ser especificados requisitos de semântica dinâmica (dependentes 
+do conteúdo que se vai introduzindo no documento).
+
 \subsubsection{Observação de interpretações firmadas em jurisprudência sobre normas}
 
 Este requisito pressupõe a verificação de algumas condições estruturais e semânticas.
@@ -46,13 +50,15 @@ As condições semânticas podem ser divididas em duas: estáticas e dinâmicas.
 Ambas terão de ser especificadas no momento da definição do modelo para a tipologia. 
 A semântica estática pode ficar definida no modelo em AKN ou ainda numa estensão a este modelo criada na plataforma LEOS.
 A semântica dinâmica, depende de valores que serão introduzidos aquando da criação do documento e a sua verificação terá 
-de ser garantida usando uma linguagem extra de regras ou materializadas no código da aplicação.
+de ser garantida usando uma parte da linguagem AKN, ou uma linguagem extra de regras ou materializadas 
+no código da aplicação. Estas três alternativas dão solução ao problema, caberá à equipa de projeto 
+selecionar a metodologia que for mais conveniente.
 
 \subsubsection{Apoio à elaboração de tarefas de avaliação normativa}
 
 As tarefas de avaliação normativa pretendem avaliar o impacto da nova legislação que está a ser criada.
 É algo externo ao ato normativo e para o qual é necessário a interpretação e análise humana.
-O apoio será no registo da informação que possa conduzir a um valor final de impacto. 
+O apoio referido será no registo da informação que possa conduzir a um valor final de impacto. 
 
 O LEOS não possui qualquer suporte à elaboração destas tarefas.
 Para isso, será necessário desenvolver um componente de raiz, que poderá estar integrado no LEOS ou comunicar com este 
@@ -75,14 +81,16 @@ Para isso, é necessário garantir a adoção de várias regras/normas:
 \begin{itemize}
     \item É preciso garantir uma forma única de referenciar os atos normativos, seja ela o ELI 
     ("\emph{European Legislation Identifier}") \cite{ELI}, ou simplesmente aquilo a que estamos habituados em Portugal, ou 
-    seja, uma referência composta por tipologia, número de série e ano; 
+    seja, uma referência composta por tipologia, número de série e ano (no caso desta última, deverá 
+    estar formalmente definida sem margem para ambiguidades); 
 
     \item Garantir a presença \emph{online}, de um repositório de atos normativos permanentemente atualizado e acessível;
     \item Ter uma API ("\emph{Application Program Interface}") bem definida sobre o repositório anterior que permita a 
     integração automática e a interoperabilidade com outros sistemas, por exemplo, o que se pretende desenvolver.
 \end{itemize}
 
-Devido a inexistência destas normas, podemos avançar com um pequeno protótipo próprio mas que terá sempre as desvantagens de 
+Devido à inexistência deste contexto de normalização, podemos avançar com um pequeno protótipo próprio 
+mas que terá sempre as desvantagens de 
 estar fora dos canais oficiais e de sofrer de permanente desatualização.
 
 
@@ -107,7 +115,8 @@ Relativamente à jurisprudência, a situação é semelhante à da legislação,
     integração automática e a interoperabilidade com outros sistemas, por exemplo, o que se pretende desenvolver.
 \end{itemize}
 
-À semelhança do ponto anterior, devido a inexistência destas normas, podemos avançar com um pequeno protótipo próprio mas que terá sempre as desvantagens de 
+À semelhança do ponto anterior, devido à inexistência deste contexto normalizado, podemos avançar 
+com um pequeno protótipo próprio mas que terá sempre as desvantagens de 
 estar fora dos canais oficiais e de sofrer de permanente desatualização.
 
 \subsubsection{Verificação semântica das normas invocadas}
@@ -133,16 +142,25 @@ compreendam e usem esses dados de forma interoperável.
 
 A linguagem OWL é baseada em \emph{Description Logic} (DL), que fornece uma base formal para o raciocínio automatizado. 
 Isso significa que a partir de uma ontologia de base a máquina consegue inferir novos fatos a partir dos dados existentes, 
-aumentar automaticamente o seu conhecimento e com isso 
+aumentando automaticamente o seu conhecimento e com isso 
 melhorar a busca de informação e facilitar a integração de dados de diversas fontes.
 A linguagem tem vários níveis de complexidade deixando a quem a utiliza a decisão de qual o nível que pretende usar. 
 Desta forma, pode-se dizer que tudo se pode especificar em OWL.
+
+Esta tarefa carece de uma especificação formal dos modelos semânticos que deve ser feita em conjunto com a 
+especificação formal dos modelos das tipologias.
+O modelo semântico OWL poderá até, inicialmente, ser povoado com a informação proveniente da especificação 
+da tipologia.
 
 \subsubsection{Descrição dos workflows para a criação e gestão de atos normativos}
 
 O Ministério da Justiça possui já uma ferramenta própria para automatização de workflows. 
 Se for possível colocar o novo sistema a dialogar com essa ferramenta consegue-se cumprir este requisito e 
 poupar imenso tempo de desenvolvimento.
+
+Para isso, será necessário garantir a interoperabilidade técnica e sintática entre os dois sistemas. 
+Ou seja, terá de haver mecanismos/protocolos para o intercâmbio de informação entre os dois sistemas e 
+deverá estar definido o formato da informação que se vai trocar.
 
 
 \subsection{Requisitos de interoperabilidade}
@@ -176,7 +194,7 @@ República;
 em XML e seguir normas internacionais (Akoma Ntoso XML format, uma norma OASIS para
 documentos legislativos);
 \item Interoperabilidade Semântica: representação semântica dos dados, ontologias OWL, utilização
-do ELI e da ontologia associada;
+do ELI e da ontologia associada.
 \end{itemize}
 
 \subsection{Identificação dos mecanismos de IA e das ferramentas conexas a usar no desenvolvimento

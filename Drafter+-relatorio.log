@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.21)  11 JUN 2024 11:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.3.21)  12 JUN 2024 16:18
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -236,8 +236,14 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 File: l3backend-pdftex.def 2024-02-20 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count284
 \l__pdf_internal_box=\box52
+) (./Drafter+-relatorio.aux
+
+LaTeX Warning: Label `fig-catalog' multiply defined.
+
+
+LaTeX Warning: Label `fig-catalog' multiply defined.
+
 )
-No file Drafter+-relatorio.aux.
 \openout1 = `Drafter+-relatorio.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 114.
@@ -258,7 +264,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 114.
 LaTeX Font Info:    ... okay on input line 114.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 114.
 LaTeX Font Info:    ... okay on input line 114.
-(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count285
 \scratchdimen=\dimen157
@@ -318,6 +324,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
  (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx))
 Package hyperref Info: Link coloring ON on input line 114.
+ (./Drafter+-relatorio.out) (./Drafter+-relatorio.out)
 \@outlinefile=\write4
 \openout4 = `Drafter+-relatorio.out'.
 
@@ -328,12 +335,12 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 3.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 3.
-<./eeng.png, id=4, 154.5775pt x 139.52126pt>
+<./eeng.png, id=188, 154.5775pt x 139.52126pt>
 File: ./eeng.png Graphic file (type png)
 <use ./eeng.png>
 Package pdftex.def Info: ./eeng.png  used on input line 10.
 (pdftex.def)             Requested size: 154.5771pt x 139.5209pt.
-<./onto.png, id=6, 807.015pt x 744.7825pt>
+<./onto.png, id=190, 807.015pt x 744.7825pt>
 File: ./onto.png Graphic file (type png)
 <use ./onto.png>
 Package pdftex.def Info: ./onto.png  used on input line 11.
@@ -355,7 +362,7 @@ File: ./onto.png Graphic file (type png)
 Package pdftex.def Info: ./onto.png  used on input line 11.
 (pdftex.def)             Requested size: 142.26378pt x 131.2935pt.
 
-Overfull \hbox (32.22638pt too wide) in alignment at lines 4--34
+Overfull \hbox (32.22638pt too wide) in alignment at lines 4--33
 [] []
  []
 
@@ -363,24 +370,39 @@ Overfull \hbox (32.22638pt too wide) in alignment at lines 4--34
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.50 \end{titlepage}
-                     [1])
-No file Drafter+-relatorio.toc.
+l.49 \end{titlepage}
+                     [1]) (./Drafter+-relatorio.toc
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 12.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [2
+
+]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.9186pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.9186pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
+
+[3])
 \tf@toc=\write5
 \openout5 = `Drafter+-relatorio.toc'.
 
-(./drafter-executante.tex [2
+ (./drafter-executante.tex
 
-]
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[4]
 Cap\'{\i }tulo 1.
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
-)
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 12.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [3
+) [5
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+pcr on input line 30.
@@ -394,21 +416,15 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[4]
+[6]
 Cap\'{\i }tulo 2.
-) (./drafter-introducao.tex [5
+) (./drafter-introducao.tex [7
 
 ]
 Cap\'{\i }tulo 3.
-
-LaTeX Warning: Reference `tipologias' on page 6 undefined on input line 18.
-
-[6
+[8
 
 ]
-
-LaTeX Warning: Reference `requisitos' on page 7 undefined on input line 34.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.9186pt, for example:
@@ -416,26 +432,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
 
-[7]
-
-LaTeX Warning: Reference `prototipo' on page 8 undefined on input line 65.
-
-) (./drafter-tipologias.tex
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[8]
-Cap\'{\i }tulo 4.
-[9
-
-]
-
-LaTeX Warning: Citation `GuiaLegistica2019' on page 10 undefined on input line 44.
-
+[9]) (./drafter-tipologias.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -444,24 +441,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [10]
-LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 81.
- (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1pcr.fd
-File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
-)
+Cap\'{\i }tulo 4.
+[11
 
-LaTeX Warning: Citation `VPCB2018' on page 11 undefined on input line 98.
-
-
-LaTeX Warning: Reference `akn' on page 11 undefined on input line 98.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.9186pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.9186pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
-
-[11]
+]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -470,6 +453,10 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [12]
+LaTeX Font Info:    Trying to load font information for TS1+pcr on input line 81.
+ (/usr/local/texlive/2024/texmf-dist/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.9186pt, for example:
@@ -519,9 +506,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [18]
 
-LaTeX Warning: Citation `VPCB2018' on page 19 undefined on input line 456.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.9186pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.9186pt}.
@@ -529,15 +513,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
 
 [19]
-
-LaTeX Warning: Citation `Freed2012' on page 20 undefined on input line 486.
-
-
-LaTeX Warning: Citation `Barabucci2010' on page 20 undefined on input line 499.
-
-
-LaTeX Warning: Citation `NairobiDeclaration2005' on page 20 undefined on input line 500.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -547,54 +522,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [20]
 
-LaTeX Warning: Citation `Buie2012' on page 21 undefined on input line 505.
-
-
-LaTeX Warning: Citation `Europarl2013' on page 21 undefined on input line 507.
-
-
-LaTeX Warning: Citation `Bundestag2020' on page 21 undefined on input line 507.
-
-
-LaTeX Warning: Citation `VoxPopuLII' on page 21 undefined on input line 508.
-
-
-LaTeX Warning: Citation `AT4AMVideo' on page 21 undefined on input line 509.
-
-
-LaTeX Warning: Citation `AT4AMWorld' on page 21 undefined on input line 509.
-
-
-LaTeX Warning: Citation `CENMetaLex' on page 21 undefined on input line 513.
-
-
-LaTeX Warning: Citation `AkomaNtosoUpdates2010' on page 21 undefined on input line 515.
-
-
-LaTeX Warning: Citation `OASISLegalDocML' on page 21 undefined on input line 518.
-
-
-LaTeX Warning: Citation `USLMGuide2013' on page 21 undefined on input line 520.
-
-
-LaTeX Warning: Citation `LexMLBrasil2008' on page 21 undefined on input line 521.
-
-
-LaTeX Warning: Citation `OGPUKNAP2015' on page 21 undefined on input line 527.
-
-
-LaTeX Warning: Citation `AkomaNtosoBulkData2016' on page 21 undefined on input line 530.
-
-
-LaTeX Warning: Citation `EGesetzgebung' on page 21 undefined on input line 533.
-
-
-LaTeX Warning: Citation `LegalDocMLDE' on page 21 undefined on input line 534.
-
-
-LaTeX Warning: Citation `Flatt2022' on page 21 undefined on input line 534.
-
-
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.9186pt, for example:
 (fancyhdr)                \setlength{\headheight}{13.9186pt}.
@@ -603,15 +530,25 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [21]
 
-LaTeX Warning: Citation `AkomaNtosoStandard2020' on page 22 undefined on input line 548.
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
+[22]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.9186pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.9186pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
+
+[23]
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 558.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <5> on input line 558.
-
-LaTeX Warning: Citation `AkomaNtoso2018' on page 22 undefined on input line 558.
-
 ) (./drafter-requisitos.tex
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -620,50 +557,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[22]
+[24]
 Cap\'{\i }tulo 5.
-
-LaTeX Warning: Reference `prototipo' on page 23 undefined on input line 5.
-
-[23
+[25
 
 ]
 
-LaTeX Warning: Citation `VPCB2018' on page 24 undefined on input line 34.
-
-
-LaTeX Warning: Reference `modelos' on page 24 undefined on input line 35.
-
-
-LaTeX Warning: Reference `akn' on page 24 undefined on input line 44.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.59999pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.59999pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
-
-[24]
-
-LaTeX Warning: Citation `ELI' on page 25 undefined on input line 77.
-
-
-LaTeX Warning: Citation `ECLI' on page 25 undefined on input line 99.
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 13.9186pt, for example:
-(fancyhdr)                \setlength{\headheight}{13.9186pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
-
-[25]
-
-LaTeX Warning: Citation `owl' on page 26 undefined on input line 123.
-
-
-LaTeX Warning: Citation `owl2' on page 26 undefined on input line 123.
+LaTeX Warning: Reference `modelos' on page 26 undefined on input line 35.
 
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -673,9 +573,6 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
 [26]
-
-LaTeX Warning: Citation `EIF' on page 27 undefined on input line 161.
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.9186pt, for example:
@@ -691,7 +588,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[28]) (./drafter-leos.tex
+[28]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.9186pt, for example:
@@ -700,8 +597,24 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
 
 [29]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[30]) (./drafter-leos.tex
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.9186pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.9186pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
+
+[31]
 Cap\'{\i }tulo 6.
-[30
+[32
 
 ]
 
@@ -711,7 +624,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
 
-[31]
+[33]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -719,7 +632,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[32]
+[34]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.9186pt, for example:
@@ -727,7 +640,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
 
-[33]
+[35]
 Overfull \hbox (3.5628pt too wide) in paragraph at lines 150--155
 [][]\T1/pcr/m/n/12 \leos\modules\ui-angular\src\config\global.ts[]\T1/ptm/m/n/12 , de modo a in-cluir o fi-cheiro
  []
@@ -749,15 +662,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[34]
-
-LaTeX Warning: Reference `fig-catalog' on page 35 undefined on input line 221.
-
-<./imagens/catalog2.png, id=246, 564.30824pt x 554.07pt>
+[36]
+<./imagens/catalog2.png, id=510, 564.30824pt x 554.07pt>
 File: ./imagens/catalog2.png Graphic file (type png)
 <use ./imagens/catalog2.png>
 Package pdftex.def Info: ./imagens/catalog2.png  used on input line 223.
 (pdftex.def)             Requested size: 284.52756pt x 279.37619pt.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.9186pt, for example:
@@ -765,7 +676,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
 
-[35]
+[37]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -773,13 +684,13 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[36 <./imagens/catalog2.png>]
-<./imagens/leos_lista02.png, id=260, 666.69075pt x 470.9595pt>
+[38 <./imagens/catalog2.png>]
+<./imagens/leos_lista02.png, id=523, 666.69075pt x 470.9595pt>
 File: ./imagens/leos_lista02.png Graphic file (type png)
 <use ./imagens/leos_lista02.png>
 Package pdftex.def Info: ./imagens/leos_lista02.png  used on input line 263.
 (pdftex.def)             Requested size: 426.79134pt x 301.48491pt.
-<./imagens/leos_lei.png, id=261, 440.847pt x 418.56375pt>
+<./imagens/leos_lei.png, id=524, 440.847pt x 418.56375pt>
 File: ./imagens/leos_lei.png Graphic file (type png)
 <use ./imagens/leos_lei.png>
 Package pdftex.def Info: ./imagens/leos_lei.png  used on input line 265.
@@ -792,7 +703,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.9186pt}.
 
-[37 <./imagens/leos_lista02.png>]
+[39 <./imagens/leos_lista02.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -800,255 +711,84 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-[38 <./imagens/leos_lei.png>]
-./Drafter+-relatorio.bbl:13: Undefined control sequence.
-<argument> \protect \citeauthoryear 
-                                    {Vitali, Palmirani, Cervone\BCBL {}\ \BB...
-l.13 akoma-ntoso}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+[40 <./imagens/leos_lei.png>] [41
 
-./Drafter+-relatorio.bbl:13: Undefined control sequence.
-<argument> ...ar {Vitali, Palmirani, Cervone\BCBL 
-                                                  {}\ \BBA {} Bartolini}{Vit...
-l.13 akoma-ntoso}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Drafter+-relatorio.bbl:13: Undefined control sequence.
-<argument> ...i, Palmirani, Cervone\BCBL {}\ \BBA 
-                                                  {} Bartolini}{Vitali\ \pro...
-l.13 akoma-ntoso}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Drafter+-relatorio.bbl:13: Undefined control sequence.
-<argument> ...artolini}{Vitali\ \protect \BOthers 
-                                                  {.}}{{\protect \APACyear {...
-l.13 akoma-ntoso}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Drafter+-relatorio.bbl:13: Undefined control sequence.
-<argument> ...t \BOthers {.}}{{\protect \APACyear 
-                                                  {2018}}}
-l.13 akoma-ntoso}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Drafter+-relatorio.bbl:13: Undefined control sequence.
-<write> ...ryear {Vitali, Palmirani, Cervone\BCBL 
-                                                  {}\ \BBA {} Bartolini}{Vit...
-l.13 akoma-ntoso}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Drafter+-relatorio.bbl:13: Undefined control sequence.
-<write> ...tali, Palmirani, Cervone\BCBL {}\ \BBA 
-                                                  {} Bartolini}{Vitali\ \pro...
-l.13 akoma-ntoso}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Drafter+-relatorio.bbl:14: Undefined control sequence.
-l.14 \APACinsertmetastar
-                         {%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+]
+Underfull \hbox (badness 10000) in paragraph at lines 53--56
+\T1/pcr/m/n/12 content _ european _ case _ law _ identifier _ ecli-[]175-[]en . do$[][]\T1/ptm/m/n/12 .
+ []
 
 
-./Drafter+-relatorio.bbl:16: LaTeX Error: Environment APACrefauthors undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.16 \begin{APACrefauthors}
-                           %
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./Drafter+-relatorio.bbl:20: Undefined control sequence.
-l.20 \BCBL
-           {}\ \BBA {} Bartolini, D.%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Drafter+-relatorio.bbl:20: Undefined control sequence.
-l.20 \BCBL {}\ \BBA
-                    {} Bartolini, D.%
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
+[]\T1/ptm/m/n/12 Framework eu-ro-peia de in-te-ro-pe-ra-bi-li-dade.  [][]$\T1/pcr/m/n/12 https :
+ []
 
 
-./Drafter+-relatorio.bbl:21: LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefauthors}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.21 \end{APACrefauthors}
-                         %
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./Drafter+-relatorio.bbl:24: Undefined control sequence.
-l.24 \APACrefYear
-                 {2018}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Drafter+-relatorio.bbl:26: Undefined control sequence.
-l.26 \APACrefbtitle
-                    {Akoma Ntoso for Legal Documents} {Akoma ntoso for legal...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-./Drafter+-relatorio.bbl:28: Undefined control sequence.
-l.28 \APACaddressPublisher
-                          {Berlin, Germany}{Springer}.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
+\T1/pcr/m/n/12 / / joinup . ec . europa . eu / collection /
+ []
 
 
-./Drafter+-relatorio.bbl:30: LaTeX Error: Environment APACrefURL undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.30 \begin{APACrefURL}
-                        \url{https://link.springer.com/book/10.1007/978-3-31...
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
+Underfull \hbox (badness 10000) in paragraph at lines 63--66
+\T1/pcr/m/n/12 nifo-[]national-[]interoperability-[]framework-[]observatory /
+ []
 
 
-./Drafter+-relatorio.bbl:30: LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefURL}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.30 ...0.1007/978-3-319-96998-0} \end{APACrefURL}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./Drafter+-relatorio.bbl:32: Undefined control sequence.
-l.32 \APACrefnote
-                 {An introduction to the Akoma Ntoso standard for legal docu...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
+[]\T1/ptm/m/n/12 Parliaments able to save time thanks to free ep tool
+ []
 
 
-./Drafter+-relatorio.bbl:34: LaTeX Error: Environment APACrefDOI undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.34 \begin{APACrefDOI}
-                        \doi{10.1007/978-3-319-96998-0} \end{APACrefDOI}
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-./Drafter+-relatorio.bbl:34: Undefined control sequence.
-l.34 \begin{APACrefDOI} \doi
-                            {10.1007/978-3-319-96998-0} \end{APACrefDOI}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
+\T1/ptm/m/n/12 for ma-na-ging amend-ments.  [][]$\T1/pcr/m/n/12 https : / / www . europarl .
+ []
 
 
-./Drafter+-relatorio.bbl:34: LaTeX Error: \begin{thebibliography} on input line 1 ended by \end{APACrefDOI}.
+Underfull \hbox (badness 10000) in paragraph at lines 73--76
+\T1/pcr/m/n/12 europa . eu / news / en / press-[]room / 20130320STO06633 /
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.34 ...0.1007/978-3-319-96998-0} \end{APACrefDOI}
-                                                  
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
 
-./Drafter+-relatorio.bbl:35: Undefined control sequence.
-l.35 \PrintBackRefs
-                   {\CurrentBib}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+Overfull \hbox (170.60551pt too wide) in paragraph at lines 73--76
+\T1/pcr/m/n/12 parliaments-[]able-[]to-[]save-[]time-[]thanks-[]to-[]free-[]ep-[]tool-[]for-[]managing-[]amendments$[][]\T1/ptm/m/n/12 ,
+ []
 
-./Drafter+-relatorio.bbl:35: Undefined control sequence.
-l.35 \PrintBackRefs{\CurrentBib
-                               }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-) [39
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
 
-] (./Drafter+-relatorio.aux)
+[42]
+Underfull \hbox (badness 1728) in paragraph at lines 124--127
+[]\T1/ptm/m/n/12 At4am: the xml web edi-tor used by mem-bers of eu-ro-pean par-li-a-ment.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+[][]$\T1/pcr/m/n/12 https : / / blog . law . cornell . edu / voxpop / 2012 / 01 / 17 /
+ []
+
+
+Overfull \hbox (83.20555pt too wide) in paragraph at lines 124--127
+\T1/pcr/m/n/12 at4am-[]the-[]xml-[]web-[]editor-[]used-[]by-[]members-[]of-[]european-[]parliament/$[][]\T1/ptm/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 3179) in paragraph at lines 141--145
+\T1/ptm/m/n/12 Do-cu-ment Over-view (Se-cond Edi-tion).  [][]$\T1/pcr/m/n/12 https : / / www . w3 . org / TR /
+ []
+
+)
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 13.59999pt, for example:
+(fancyhdr)                \setlength{\headheight}{13.59999pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-1.59999pt}.
+
+[43] (./Drafter+-relatorio.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -1058,30 +798,24 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
-
-Package rerunfilecheck Warning: File `Drafter+-relatorio.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `Drafter+-relatorio.out':
-(rerunfilecheck)             Before: <no file>
-(rerunfilecheck)             After:  7F86B367AC2B968BD73783BADA30647D;8488.
+Package rerunfilecheck Info: File `Drafter+-relatorio.out' has not changed.
+(rerunfilecheck)             Checksum: 7F86B367AC2B968BD73783BADA30647D;8488.
  ) 
 Here is how much of TeX's memory you used:
- 11307 strings out of 474116
- 180160 string characters out of 5743682
+ 11413 strings out of 474116
+ 181760 string characters out of 5743682
  1940187 words of memory out of 5000000
- 33360 multiletter control sequences out of 15000+600000
- 623301 words of font info for 100 fonts, out of 8000000 for 9000
+ 33428 multiletter control sequences out of 15000+600000
+ 620498 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,13n,79p,357b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Drafter+-relatorio.pdf (40 pages, 665581 bytes).
+ 69i,13n,79p,725b,678s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2024/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Drafter+-relatorio.pdf (44 pages, 690746 bytes).
 PDF statistics:
- 334 PDF objects out of 1000 (max. 8388607)
- 269 compressed objects within 3 object streams
- 110 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 635 PDF objects out of 1000 (max. 8388607)
+ 561 compressed objects within 6 object streams
+ 141 named destinations out of 1000 (max. 500000)
+ 394 words of extra memory for PDF output out of 10000 (max. 10000000)
 

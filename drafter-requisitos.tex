@@ -72,6 +72,7 @@ Relacinonado com o ponto anterior. Estas funcionalidades deverão fazer parte do
 
 \subsubsection{Verificação e validação das referências normativas e legais identificadas nos textos preparados
 na plataforma (verificação da existência das normas invocadas)}
+\label{bases_legis}
 
 Como já foi referido em cima, para o cumprimento deste requisito é necessário dispôr de uma base de dados com a 
 produção jurídico-normativa de Portugal.
@@ -95,6 +96,7 @@ estar fora dos canais oficiais e de sofrer de permanente desatualização.
 
 
 \subsubsection{Pesquisa e identificação automática de legislação e jurisprudência}
+\label{bases_jurisprud}
 
 Os requisitos descritos no ponto anterior são também válidos neste ponto.
 Havendo um repositório de legislação que obedeça a um conjunto de regras transversais, basta incluir uma funcionalidade de 
@@ -183,19 +185,24 @@ e agirem em prol de benefícios comuns, através de comunicação e partilha de 
 Apesar de independentes, as quatro camadas são interdependentes, sendo que para se conseguir atingir a interoperabilidade 
 semântica, as outras terão de estar contempladas (neste projeto é importante atingir o patamar semântico).
 
-\begin{itemize}
-\item Integração com fontes primárias fundamentais, designadamente bases de dados, com toda a
+No contexto da interoperabilidade, pretende-se uma integração com as fontes primárias fundamentais, 
+designadamente bases de dados, com toda a
 legislação e atos normativos, para apoio à redação legislativa e normativa: p.e., Diário da
-República;
-\item Integração com fontes primárias de jurisprudência: p. ex., ECLI;
-\item Integração com entidades parceiras identificadas para o fornecimento de dados;
-\item Interoperabilidade técnica: protocolos de comunicação, API de dados REST ou Web Service ;
-\item Interoperabilidade Sintática: formato de importação e exportação de dados; deverá ser baseado
-em XML e seguir normas internacionais (Akoma Ntoso XML format, uma norma OASIS para
-documentos legislativos);
-\item Interoperabilidade Semântica: representação semântica dos dados, ontologias OWL, utilização
-do ELI e da ontologia associada.
-\end{itemize}
+República. Como já foi referido atrás (\ref{bases_legis}), este é um requisito com implicações
+organizacionais e políticas, é preciso normalizar e adoptar transversalmente algumas regras. Antes da 
+interoperabilidate técnica, sintática e semântica, temos de resolver os requisitos da 
+interoperabilidade organizacional.
+
+Pretende-se também a integração com fontes primárias de jurisprudência, que é também um problema 
+que começa no topo com a interoperabilidade organizacional (\ref{bases_jurisprud}). É preciso normalizar 
+e adotar transversalmente um conjunto de regras já expostas anteriormente.
+
+A interoperabilidade sintática e semântica fica garantida com a adoção do Akoma Ntoso \cite{AkomaNtoso2018} 
+quer para a definição estrutural e semênticas das tipologias legísticas como para o seu conteúdo.
+
+Por fim, para garantir a interoperabilidade técnica será preciso expor uma API de dados REST ou Web
+Service a partir do LEOS, o que com algum trabalho se consegue fazer.
+
 
 \subsection{Identificação dos mecanismos de IA e das ferramentas conexas a usar no desenvolvimento
 da plataforma}

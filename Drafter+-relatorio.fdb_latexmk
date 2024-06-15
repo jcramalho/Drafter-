@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex Drafter+-relatorio"] 1718312815 "Drafter+-relatorio.aux" "Drafter+-relatorio.bbl" "Drafter+-relatorio" 1718312816
+["bibtex Drafter+-relatorio"] 1718432629 "Drafter+-relatorio.aux" "Drafter+-relatorio.bbl" "Drafter+-relatorio" 1718433116
   "/usr/local/texlive/2019/texmf-dist/bibtex/bst/base/alpha.bst" 1292289607 23907 a5f93555796fb564b924339521f10a7c ""
-  "Drafter+-relatorio.aux" 1718312816 12108 17973c5efdd0e89e40222afbc813d255 "pdflatex"
+  "Drafter+-relatorio.aux" 1718433116 12108 8aafcf035ebb3f0aa18edf5c9ebf313f "pdflatex"
   "drafter.bib" 1717049997 10140 fe41729068721eda66d6df23d06cb6c1 ""
   (generated)
-  "Drafter+-relatorio.blg"
   "Drafter+-relatorio.bbl"
-["pdflatex"] 1718312815 "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.tex" "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.pdf" "Drafter+-relatorio" 1718312816
-  "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.aux" 1718312816 12108 17973c5efdd0e89e40222afbc813d255 ""
+  "Drafter+-relatorio.blg"
+["pdflatex"] 1718433115 "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.tex" "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.pdf" "Drafter+-relatorio" 1718433116
+  "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.aux" 1718433116 12108 8aafcf035ebb3f0aa18edf5c9ebf313f ""
   "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.tex" 1718205617 4497 2ed85396f5975e8d01dd3a9ab751e7eb ""
   "/usr/local/texlive/2019/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2019/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -110,15 +110,15 @@
   "/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1557342064 3277517 23507ed665b4dd9046f0f2a94bbef2be ""
   "/usr/local/texlive/2019/texmf-var/web2c/pdftex/pdflatex.fmt" 1575540843 4259636 6f1eb0f26163847781331c6bba0fadb1 ""
   "/usr/local/texlive/2019/texmf.cnf" 1557341546 577 d150fef99ac436ad1156e86b0892f6ef ""
-  "Drafter+-relatorio.aux" 1718312816 12108 17973c5efdd0e89e40222afbc813d255 "pdflatex"
-  "Drafter+-relatorio.bbl" 1718312815 6327 e8ecacb2a322484c8a8108f778226663 "bibtex Drafter+-relatorio"
-  "Drafter+-relatorio.out" 1718312816 3408 82e6599fba4ce8f9e0a664ddda0c85bd "pdflatex"
+  "Drafter+-relatorio.aux" 1718433116 12108 8aafcf035ebb3f0aa18edf5c9ebf313f "pdflatex"
+  "Drafter+-relatorio.bbl" 1718432629 6327 e8ecacb2a322484c8a8108f778226663 "bibtex Drafter+-relatorio"
+  "Drafter+-relatorio.out" 1718433116 3408 82e6599fba4ce8f9e0a664ddda0c85bd "pdflatex"
   "Drafter+-relatorio.tex" 1718205617 4497 2ed85396f5975e8d01dd3a9ab751e7eb ""
-  "Drafter+-relatorio.toc" 1718312816 5845 087020fce61916e06b9b75d5a3185c1f "pdflatex"
+  "Drafter+-relatorio.toc" 1718433116 5845 1f2f93570995a079fe853313575327bd "pdflatex"
   "drafter-executante.tex" 1715771696 2373 5f5e353a3c413c2a3fec2a18bdf41930 ""
   "drafter-introducao.tex" 1718205617 3284 405869ca517023697eee31282994f228 ""
   "drafter-leos.tex" 1716965276 14310 03ae323239aeab746e6940020249d267 ""
-  "drafter-requisitos.tex" 1718312814 15460 74907e0051d6ee83efec64d90233dfbc ""
+  "drafter-requisitos.tex" 1718433114 15963 eb8c4b3bad1e99ec6088a41229de2f98 ""
   "drafter-resumo.tex" 1718205617 1116 de68bd5a4fa7df3360c47596ba15e3d6 ""
   "drafter-subtitulo.tex" 1718205617 1055 b9f81596ed79e79954d11bfda13380d9 ""
   "drafter-tipologias.tex" 1716957145 26313 192a428c3d03c75b60ee71c17299668b ""
@@ -129,10 +129,10 @@
   "imagens/leos_lista02.png" 1716940000 136058 875acd92383ba11651ff7881795be58e ""
   "onto.png" 1715771696 459163 443e22d3380a5c25772cf4c675b27c55 ""
   (generated)
-  "Drafter+-relatorio.aux"
-  "Drafter+-relatorio.out"
   "Drafter+-relatorio.toc"
   "Drafter+-relatorio.pdf"
-  "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.log"
   "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.pdf"
+  "Drafter+-relatorio.aux"
   "Drafter+-relatorio.log"
+  "/Users/jcr/Documents/Projetos/SmartLegislator/Drafter-/Drafter+-relatorio.log"
+  "Drafter+-relatorio.out"

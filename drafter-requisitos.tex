@@ -230,7 +230,7 @@ O seu contributo permitiu a identificação das seguintes funcionalidades:
     \item Geração de texto jurídico com base em LLM (\emph{"Large Language Model"}: modelo de linguagem de grande escala).
 \end{itemize}
 
-Ainda antes deste trabalho, com início em 2021, foi elaborado um estudo, 
+Ainda antes deste trabalho, com início em 2021, foi elaborado um estudo \cite{PFPD22}, 
 pela universidade de Bolonha que explorou a aplicação de inteligência artificial neste contexto.
 
 Este estudo baseou-se na seguinte premissa:
@@ -284,6 +284,189 @@ Finalmente, o estudo propõe cenários inovadores e uma visão abrangente para, 
 fazer um progresso significativo em direção a um processo decisório totalmente digital, 
 adotando tecnologias inovadoras enquanto preserva o rigor legal.
 
+\subsubsection{Constrangimentos e Requisitos no uso de IA}
+
+Para se avançar neste contexto tecnológico, foram identificados alguns constrangimentos 
+que é preciso verificar e alguns requisitos que é preciso garantir. 
+Quer uns quer outros são de transposição imediata para o nosso contexto em Portugal.
+
+Os principais constrangimentos identificados são:
+
+\begin{itemize}
+    \item Culturais e institucionais: vontade de assumir riscos e embarcar na 
+    mudança; é preciso criar e aumentar o conhecimento no domínio tecnológico 
+    aplicado à redação da legislação;
+    \item Técnicos: verificar se a maturidade tecnológica é suficiente; 
+    poderá haver um distanciamento entre os casos de uso e a tecnologia existente;
+    \item Recursos: há orçamento suficiente? há pessoal técnico com as 
+    competências necessárias? qual a capacidade de aprendizagem da organização? 
+    \item Legais: a utilização da IA na redação de atos normativos deve respeitar a
+    recente legislação europeia aprovada sobre o assunto; é preciso assegurar 
+    a transparência e eliminar qualquer parcialidade.
+\end{itemize}
+
+E os requisitos que é necessário assegurar são:
+\begin{itemize}
+    \item Envolvimento por parte dos orgãos de decisão: disponibilização dos 
+    recursos necessários à implementação do projeto;
+    \item Envolvimento transversal com o sistema e as práticas que se estão a desenvolver;
+    \item Criar as parcerias institucionais necessárias a uma adoção transversal.
+\end{itemize}
+
+
+\subsubsection{Akoma Ntoso: a Inteligência Artificial precisa de uma base de representação sólida}
+
+Nos últimos vinte anos, testemunhamos uma evolução na digitalização de fontes 
+jurídicas, especialmente as legislativas. Este processo foi sofrendo uma evolução
+natural.
+
+De início, digitalizavam-se os jornais oficiais, no nosso caso, o Diário da República, para fornecer acesso aberto à 
+legislação online usando a Web. 
+
+Em seguida, com o emergir da "Web de Dados", transformaram-se as informações incluídas na legislação em dados abertos usando 
+normas abertas (noutros países, em Portugal não existe esta prática). 
+
+Pouco depois, aplicou-se o mesmo padrão para uma transformação digital profunda do processo de elaboração de leis, 
+ao mesmo tempo em que se aprimoraram os fluxos de trabalho entre instituições. 
+
+O passo seguinte é usar todos os dados abertos e a estrutura documental representada em padrões abertos para permitir a 
+análise de dados jurídicos, de modo a criar novas aplicações de IA utilizando esses grandes volumes de dados jurídicos e 
+também transformar partes das regras processuais em contratos inteligentes que são imediatamente executáveis e aplicáveis.
+
+Vários jornais oficiais, arquivos nacionais e parlamentos tentaram gerir fontes jurídicas dentro de corpora jurídicos com o uso 
+de tecnologias como bases de dados, XML, metadados RDF e fórmulas lógicas. 
+Subsequentemente, eles também começaram a fornecer versões atualizadas da legislação a qualquer momento 
+(o chamado mecanismo "point-in-time"). 
+Em 1995, o EnAct (Arnold-Moore 1995), pelo Governo da Tasmânia, foi o primeiro sistema a produzir uma base de dados legislativa 
+"point-in-time" em SGML. 
+Em 1992, o LII (Legal Information Institute) da Cornell Law School, lançado por Peter Martin e Tom Bruce (Bruce 1994), 
+disponibilizou na web (HTML) o Código Consolidado dos Estados Unidos. 
+
+O AustLII, o Instituto de Informação Jurídica da Australásia, cofundado por Graham Greenleaf em 1995, disponibiliza instrumentos 
+de IA como o DataLex. Esses instrumentos são baseados em software de inferência jurídica baseado em regras, capaz de dialogar 
+com o utilizador final (Greenleaf 2020).
+
+Usando Formex, uma linguagem SGML agora traduzida para XML (Formex v4), o Eur-Lex começou a consolidar a base de dados da 
+legislação europeia em 1999. 
+Em 1 de janeiro de 2001, a Noruega ativou um serviço web pela Lovdata e começou a fornecer legislação consolidada. 
+
+Em 2002, a França transformou o serviço comercial Jurifrance num portal web público chamado Legifrance. 
+O Legifrance inclui textos consolidados em formato misto (HTML, XML, PDF). Hoje, também suporta o formato Akoma Ntoso.
+
+A Áustria lançou o projeto eLaw (2004) e transformou a sua base de dados RIS anterior (1983) numa coleção web de documentos 
+autênticos, desmaterializando completamente a publicação do seu jornal oficial. 
+
+A Região da Emília-Romanha (Itália) começou a consolidar regulamentos em 2003 usando o esquema XML NormeInRete. 
+O Tribunal de Cassação da Itália começou com uma iniciativa semelhante em 2005 e agora está 
+quase a atingir a consolidação de todo o corpora de documentos. 
+O Senado da Itália adotou o padrão Akoma Ntoso para projetos de lei, transcrições e outros tipos de documentos também 
+fornecidos em Open Government Data.
+
+Em 30 de junho de 2009, o Senado do Brasil lançou o banco de dados parlamentar consolidado (LexMLBrasil) com uma função 
+"point-in-time" baseada numa parametrização do esquema XML Akoma Ntoso. 
+
+A Biblioteca do Congresso do Chile também fornece legislação atualizada usando Akoma Ntoso. 
+Os Arquivos Nacionais do Reino Unido vêm progressivamente transformando toda a legislação do Reino Unido em XML, RDF e 
+Akoma Ntoso desde 2012. 
+
+O Kenya Law Report está agora a converter a sua base de dados de leis em documentos XML marcados de acordo com o Akoma Ntoso. 
+Em 2017, as Nações Unidas aprovaram o Akoma Ntoso como norma oficial para sua documentação (AKN4UN), e as instituições da UE 
+lançaram um projeto similar em 2018 com a iniciativa AKN4EU.
+
+A interoperabilidade entre instituições e a simplificação do processo de elaboração de leis entre diferentes órgãos é facilitada 
+pelo uso de padrões jurídicos XML. 
+Além disso, a modelagem LegalXML fornece uma serialização digital robusta e sólida de documentos jurídicos ao aplicar 
+princípios da teoria jurídica para anotar conhecimento jurídico (por exemplo, parâmetros temporais, anotação de web semântica, 
+estrutura documental, citações normativas).
+
+\subsubsection{Modelo híbrido de tecnologias de IA}
+
+Muitas iniciativas estão em curso, em vários países, no contexto da aplicação de ferramentas de IA à produção de atos 
+normativos. Convem no entanto realçar, que a solução não virá de uma tecnologia em específico mas de uma combinação de 
+tecnologias devido a uma série de requisitos específicos deste domínio:
+
+\begin{itemize}
+    \item As tecnologias de "Machine Learning/Deep Learning (ML/DL)" funcionam sem lógica ou semântica, e muita informação 
+    contextual incluída no documento jurídico é negligenciada, com uma evidente menor capacidade de interpretação;
+
+    \item As citações jurídicas são uma prática consolidada nas disciplinas jurídicas, que confiam um papel importante a 
+    recursos textuais externos (por exemplo, definições, derrogações, modificações, integração de prescritividade, penalidades, 
+    condições). Isto significa que os algoritmos de ML/DL também devem considerar o texto citado, especialmente considerando 
+    que alguns algoritmos (por exemplo, similitude, agrupamento) podem encontrar similaridades em textos 
+    (por exemplo, "art. 3" e "art. 13") quando o conteúdo é completamente diferente. Por essa razão, a rede de normas através 
+    de citações deve ser incluída na base de treino deste algoritmos;
+
+    \item Os parâmetros temporais são fundamentais para criar um conjunto de dados robusto para ML/DL. 
+    Por exemplo, jurisprudências baseadas em legislação revogada devem ter menor relevância no conjunto de dados que alimenta 
+    o tratamento de IA de jurisprudências baseadas em nova legislação, mesmo que esses conjuntos de dados sejam menos frequentes. 
+    Portanto, frequência, cálculo probabilístico e séries temporais devem ser mitigados com critérios de relevância e validade 
+    jurídica;
+
+    \item A anotação lógica e de web semântica também deve ser integrada nos algoritmos de ML/DL para ser possível 
+    entender o tipo e o significado das relações que ligam diferentes sentenças no texto (por exemplo, obrigação e 
+    penalidade, obrigação e derrogação).
+
+\end{itemize}
+
+Por estas razões, uma arquitetura híbrida, envolvendo anotações lógicas e semânticas, tratamento de citações e de referências 
+temporais, será necessária. O AKoma Ntoso pode funcionar como o denominador comum no meio destas tecnologias.
+
+
+\subsubsection{IA: implicações éticas e legais}
+
+A aplicação de IA no domínio da redação de atos normativos tem diferentes implicações. 
+Do ponto de vista constitucional, levanta a questão da delicada relação entre a separação democrática dos poderes; 
+do ponto de vista da teoria jurídica, levanta o problema da interpretação que está oculta no código computacional, 
+de modo que os princípios de texto aberto não são respeitados; da perspectiva ética, surgem questões quando a máquina 
+indica uma regulamentação que pode levar a uma possível discriminação ou limitar a autonomia na tomada de decisões políticas.
+
+Numa adoção da IA neste domínio, pelo menos os seguintes riscos devem ser monitorados:
+
+\begin{itemize}
+
+    \item Uma lei não é composta apenas por regras, também inclui elementos que dificilmente podem ser refletidos em fórmulas 
+    estáticas (por exemplo, princípios e valores);
+
+    \item Fixar normas num código monolítico é uma forma de tradução do texto legislativo que não permite que as normas se 
+    adaptem à evolução da sociedade;
+
+    \item Usar \emph{'linguagens artificiais/formais'} é usar um subconjunto da linguagem natural (Chomsky 2006), 
+    o que traz limitações;
+    
+    \item As normas podem ser intencionalmente mantidas vagas, por exemplo, para implementar um equilíbrio entre diferentes 
+    instituições;
+
+    \item Qualquer previsão baseada apenas no passado é inerentemente limitada;
+    \item As previsões influenciam os tomadores de decisão e o comportamento humano futuro (Hildebrandt 2021).
+
+\end{itemize}
+
+\subsubsection{Como utilizar a Inteligência Artificial}
+
+O estudo que se resumiu aqui com algumas adaptações ao nosso contexto, \cite{PFPD22}, conclui o seguinte sobre a utilização da IA:
+
+\begin{quoting}
+    É possível desenvolver, sob certas condições (a serem definidas), um robusto quadro teórico e empírico 
+    jurídico-tecno-linguístico que facilite a tarefa de definir atos normativos de maneira oficial e autoritativa num 
+    formato consumível por máquinas (por exemplo, XML) que tenha o mesmo valor legal que o texto em linguagem natural, 
+    que por séculos tem sido o meio de escolha para os sistemas jurídicos.
+
+    É evidente que tornar normas jurídicas e éticas consumíveis por máquinas, e não simplesmente legíveis por máquinas, 
+    é uma necessidade premente, tornando possível economizar tempo, reagir prontamente a mudanças, permitir a aplicação 
+    correta de regulamentos, possibilitar o diálogo máquina a máquina com artefatos digitais (por exemplo, implementar 
+    políticas), analisar impactos e tomar decisões rápidas para a economia e a sociedade. 
+    Se um quadro sólido de "Lei como Código" for definido e adotado por parlamentos, corpos deliberativos, 
+    instituições governamentais e entidades administrativas públicas, podemos economizar quantidades significativas de 
+    tempo na implementação prática das normas, evitar erros, monitorar facilmente os efeitos das normas jurídicas, 
+    corrigir prescrições ineficazes e desenvolver um ecossistema integrado com as entidades da infosfera digital, 
+    preparando a futura interação com robôs, multiagentes, IA, blockchain e contratos inteligentes.
+    
+    Além disso, os sistemas baseados em IA podem apoiar o processo legislativo na fase de redação para produzir uma 
+    regulamentação melhor que evite erros e inconsistências. Essa abordagem economiza dinheiro para as empresas, reduz o 
+    número de ações judiciais e diminui os custos de litígios, ao mesmo tempo que torna o cumprimento das regras e o 
+    respeito pelo estado de direito mais eficazes.
+\end{quoting}    
+
 
 \subsection{Requisitos da infraestrutura}
 
@@ -303,6 +486,80 @@ Conselho Superior da Magistratura (CSM).
 
 
 \subsection{Requisitos de sustentabilidade}
+
+Relativamente à sustentabilidade da plataforma a desenvolver podemos apontar alguns divididos por várias categorias.
+
+\subsubsection{Ambientais}
+
+Se se pretender ir de encontro a um dos eixos da comunidade sobre desenvolvimento sustentável:
+
+\begin{description}
+    \item[Eficiência Energética:] Utilizar servidores e data centers energeticamente eficientes, preferencialmente com 
+    certificação Energy Star;
+    \item[Energias Renováveis:] Implementar o uso de energia renovável, como solar ou eólica, para alimentar a infraestrutura;
+    \item[Gestão de Resíduos Eletrônicos:] Adotar práticas adequadas para a reciclagem e eliminação de equipamentos eletrónicos;
+    \item[Redução de Emissões de CO2:] Monitorar e minimizar a pegada de carbono das operações da plataforma;   
+    \item[Design Sustentável de Software:] Desenvolver o software para ser eficiente em termos de recursos, reduzindo a 
+    necessidade de hardware potente (\emph{"Green Computing"}).
+\end{description}
+
+\subsubsection{Económicos}
+
+A economia associada a uma solução deste tipo é normalmente um fator determinante para a sua sobrevivência.
+
+\begin{description}
+    \item[Custo-Benefício:] Garantir que a plataforma seja financeiramente viável e ofereça um bom retorno sobre o investimento.
+    Neste contexto, pode ser difícil desenhar um modelo de negócio mas é importante para a sobrevivência da plataforma;
+    \item[Escalabilidade:] Desenvolver a plataforma para ser escalável, permitindo o seu crescimento sem necessidade de grandes 
+    revisões estruturais;
+    \item[Manutenção e Suporte:] Planear para manutenção contínua e suporte técnico, prolongando a vida útil da plataforma, a 
+    designada manutenção evolutiva;
+    \item[Modelos de Negócio Sustentáveis:] Adotar modelos de negócio que garantam a longevidade financeira da plataforma.
+\end{description}    
+
+\subsubsection{Sociais}
+
+Uma plataforma deste tipo é criada para os utilizadores e por isso deve ser criada com eles, envolvendo-os e garantindo a sua
+acessibilidade. 
+
+\begin{description}
+    \item[Acessibilidade:] Garantir que a plataforma esteja sempre acessível aos 
+    utilizadores a quem se destina, eventualmente, seguindo normas como WCAG (Web Content Accessibility Guidelines);
+    \item[Ética e Transparência:] Assegurar práticas éticas na gestão de dados e transparência nas políticas de privacidade 
+    e segurança;
+    \item[Envolvimento da Comunidade:] Envolver a comunidade de utilizadores no desenvolvimento e melhoria contínua da plataforma. 
+    A plataforma destina-se a um conjunto de utilizadores o seu constante envolvimento é determinante para o sucesso.
+\end{description}
+
+\subsubsection{Técnicos}
+
+Numa realidade em que a tecnologia muda rapidamente e em que obsolescência tecnológica é cada vez mais rápida, atualmente abaixo 
+dos 5 anos, é importante garantir algumas condições técnicas.
+
+\begin{description}
+    \item[Desempenho:] Otimizar o desempenho da plataforma para garantir tempos de resposta rápidos e operação eficiente;
+    \item[Segurança:] Implementar medidas robustas de segurança para proteger dados e garantir a integridade da plataforma;
+    \item[Interoperabilidade:] Garantir que a plataforma se possa integrar com outras soluções e tecnologias existentes;
+    \item[Atualizações e Melhorias:] Estabelecer um processo contínuo de atualizações e melhorias para manter a plataforma 
+    atualizada e eficiente.
+\end{description}
+
+\subsubsection{Gestão}
+
+A sustentabilidade depende também de alguns processos de gestão continuados.
+
+\begin{description}
+    \item[Conformidade Legal:] Assegurar que a plataforma esteja em conformidade com todas as regulamentações e leis aplicáveis
+    (RGPD, Política de Segurança, etc);
+    \item[Política de Sustentabilidade:] Desenvolver e seguir uma política de sustentabilidade clara que guie as operações da 
+    plataforma;
+    \item[Controlo:] Implementar um sistema para monitorar e relatar o desempenho em termos de sustentabilidade 
+    regularmente.
+\end{description}
+
+Estes requisitos ajudam a garantir que uma plataforma digital não apenas funcione de forma eficiente, mas também 
+contribua positivamente para o meio ambiente, a sociedade e a economia, e que tenha a longevidade esperada e proporcional ao 
+investimento que é feito.
 
 
 

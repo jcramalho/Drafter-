@@ -1,0 +1,511 @@
+\chapter{Plano de Projeto}
+
+Neste capítulo, apresenta-se um possível plano de projeto para o desenvolvimento de uma plataforma Web para a 
+produção de atos normativos.
+
+Os requisitos foram amplamente discutidos num capítulo anterior pelo que iremos detalhar diretamente as tarefas 
+a desenvolver.
+
+\section{Descrição dos Trabalhos}
+
+Este projeto é composto por um conjunto de pacotes de trabalho (i.e., \emph{work packages} ou WP) constituídos por tarefas, 
+das quais resultam entregáveis. 
+
+Nesta secção descrevem-se em detalhe os vários WP, tarefas e entregáveis previsíveis neste projeto.
+
+\subsection{WP 1 - Gestão de Projeto}
+
+Este WP pressupõe a gestão e acompanhamento das atividades de desenvolvimento e/ou implementação de software, 
+bem como o controle de qualidade dos entregáveis correspondentes. 
+Para tal serão realizadas reuniões internas semanais com as equipas de desenvolvimento e serão definidos pontos de controlo 
+onde a qualidade dos resultados serão aferidas confrontando-os com os requisitos funcionais.
+
+\begin{tabular}{|p{3cm}|p{5cm}|l|}
+\hline
+\textbf{Duração} & Duração em dias & Duração total do projeto \\
+\hline
+\textbf{Esforço} & Esforço em dias & 30\% da duração total do projeto\\
+\hline
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{longtable}{|c|p{5cm}|p{7cm}|p{3cm}|}
+\hline
+\# & \textbf{TAREFA} & \textbf{DESCRIÇÃO} & \textbf{ENTREGÁVEIS} \\
+\hline
+1.1 & Acompanhamento do projeto & Realização de reuniões semanais com todos os elementos da equipa de projeto e a gestão 
+do processo de desenvolvimento/implementação assegurando que todos os entregáveis são concluídos dentro dos prazos 
+estabelecidos. & Atas de reunião \\
+\hline
+1.2 & Reuniões com os representantes da entidade cliente & Realização de reuniões periódicas com o cliente para reportar sobre o 
+progresso do projeto 
+e tomar decisões relativamente ao projeto. & Atas de reunião \\
+\hline
+1.3 & Controle de qualidade & Elaboração de testes aos produtos resultantes deste projeto garantindo a sua qualidade. 
+Esta tarefa visa também assegurar a qualidade dos materiais escritos resultantes do mesmo. 
+& Tickets ou relatórios de controle de qualidade \\
+\hline
+\end{longtable}
+
+
+\subsection{WP 2 - Instalação do LEOS}
+
+A solução que se pretende desenvolver assenta num LEOS "aumentado", por isso, a sua instalação deverá ser realizada logo
+de início.
+
+\begin{tabular}{|p{3cm}|p{5cm}|l|}
+    \hline
+    \textbf{Duração} & Duração em dias & 30 \\
+    \hline
+    \textbf{Esforço} & Esforço em dias & 45\\
+    \hline
+\end{tabular}
+    
+\vspace{0.5cm}
+
+\begin{longtable}{|c|p{5cm}|p{7cm}|p{3cm}|}
+    \hline
+    \# & \textbf{TAREFA} & \textbf{DESCRIÇÃO} & \textbf{ENTREGÁVEIS} \\
+    \hline
+    2.1 & Instalação da última versão disponível & Realização de ações conducentes à instalação da plataforma LEOS. Eventual troca 
+    de informação com a equipa do LEOS para esclarecimentos e algum apoio técnico. & Relatório técnico e plataforma instalada \\
+    \hline
+    2.2 & Idioma & Configuração do idioma português na plataforma. & Relatório técnico \\
+    \hline
+    2.3 & Criação dum container com a aplicação & Especificação de um orquestração em Docker, Kubernets, ou equivalente. & Relatório técnico \\
+    \hline
+    2.4 & Controle de qualidade & Elaboração de testes à plataforma instalada e verificação do suporte ao idioma de forma transversal. 
+    & Relatório de controle de qualidade \\
+    \hline
+\end{longtable}
+
+
+\subsection{WP 3 - Desenvolvimento dos modelos dos atos normativos}
+
+Depois de instalada a plataforma é preciso configurá-la para as tipologias dos atos normativos portugueses.
+
+\begin{tabular}{|p{3cm}|p{5cm}|l|}
+    \hline
+    \textbf{Duração} & Duração em dias & 90 \\
+    \hline
+    \textbf{Esforço} & Esforço em dias & 180\\
+    \hline
+\end{tabular}
+    
+\vspace{0.5cm}
+
+\begin{longtable}{|c|p{5cm}|p{7cm}|p{3cm}|}
+    \hline
+    \# & \textbf{TAREFA} & \textbf{DESCRIÇÃO} & \textbf{ENTREGÁVEIS} \\
+    \hline
+    3.1 & Estudo do Akoma Ntoso & Estudo do XML e da norma Akoma Ntoso, a equipa tem de ter conhecimento técnico sobre esta e 
+    e de como usá-la. Estudos de alguns exemplos já existentes & Relatório técnico \\
+    \hline
+    3.2 & Especificação das tipologias em AKoma Ntoso & Criação dos ficheiros XML. & Relatório técnico \\
+    \hline
+    3.3 & Especificação dos invariantes sobre as tipologias & Criação dos ficheiros XML com as regras. 
+    & Relatório técnico \\
+    \hline
+    3.4 & Especificação das regras de interface de cada tipologia & Criação dos ficheiros XML com as regras. 
+    & Relatório técnico \\
+    \hline
+    3.5 & Configuração do LEOS com as novas tipologias & Ações de configuração & Relatório técnico \\
+    \hline
+    3.6 & Desenvolvimento da interface de criação de novo modelo no LEOS. É uma tarefa que será necessário executar algumas 
+    dezenas de vezes, deve ser automatizada e tornada independente do pessoal mais técnico.
+    & Ações de desenvolvimento & Relatório técnico \\
+    \hline
+    3.7 & Controle de qualidade & Criação de alguns documentos na plataforma testanto todo o trabalho & Relatório técnico \\
+    \hline
+\end{longtable}
+
+
+\subsection{WP 4 - Autenticação}
+
+O LEOS possui um sistema de autenticação e uma componente de gestão de utilizadores.
+Normalmente, as soluções na Administração Pública Portuguesa devem fazer a autenticação recorrendo ao \texttt{Autenticação.gov}.
+
+\begin{tabular}{|p{3cm}|p{5cm}|l|}
+    \hline
+    \textbf{Duração} & Duração em dias & 15 \\
+    \hline
+    \textbf{Esforço} & Esforço em dias & 30\\
+    \hline
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{longtable}{|c|p{5cm}|p{7cm}|p{3cm}|}
+    \hline
+    \# & \textbf{TAREFA} & \textbf{DESCRIÇÃO} & \textbf{ENTREGÁVEIS} \\
+    \hline
+    4.1 & Integração com o "Autenticação.gov" & Realização de ações conducentes à integração. & Relatório técnico \\
+    \hline
+    4.2 & Integração com outros sistemas de autenticação (se fizer sentido) & Realização de ações conducentes à integração. & Relatório técnico \\
+    \hline
+    4.3 & Desenvolvimento das interfaces de gestão de utilizadores em falta & 
+    Realização de ações conducentes ao desenvolvimento dos componentes em falta. & Relatório técnico \\
+    \hline
+    4.4 & Controle de qualidade & Elaboração de testes à autenticação e controlo de acessos. 
+    & Relatório de controle de qualidade \\
+    \hline
+\end{longtable}
+
+
+\subsection{WP 5 - Integrações}
+
+Na implementação da solução portuguesa será necessário integrar o LEOS com vários sistemas existentes ou ainda a desenvolver.
+
+\begin{tabular}{|p{3cm}|p{5cm}|l|}
+    \hline
+    \textbf{Duração} & Duração em dias & 45 \\
+    \hline
+    \textbf{Esforço} & Esforço em dias & 60\\
+    \hline
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{longtable}{|c|p{5cm}|p{7cm}|p{3cm}|}
+    \hline
+    \# & \textbf{TAREFA} & \textbf{DESCRIÇÃO} & \textbf{ENTREGÁVEIS} \\
+    \hline
+    5.1 & Integração com o sistema de gestão de workflows & Realização de ações conducentes à integração com o 
+    sistema de gestão de workflows existente na Presidência de Conselho de Ministros (PCM). & Relatório técnico \\
+    \hline
+    5.2 & Integração com o Diário da República & Realização de ações conducentes à integração com o sistema que suporta o Diário 
+    da República, nomeadamente, criando um serviço de pesquisa sobre o mesmo. & Relatório técnico \\
+    \hline
+    5.3 & Integração com as bases de dados de jusrisprudência & Realização de ações conducentes à integração com o sistema que 
+    suporta as bases de dados de jurisprudência, nomeadamente, criando um serviço de pesquisa sobre o mesmo.
+    & Relatório técnico \\
+    \hline
+    5.4 & Controle de qualidade & Realização de testes de recuperação de informação entre os sistemas.
+    & Relatório técnico \\
+    \hline
+\end{longtable}
+
+
+\subsection{WP 6 - Avaliação de Impacto}
+
+A avaliação do impacto duma nova legislação é um requisito novo para o LEOS.
+Como tal, será necessário desenvolver um novo componente.
+
+\begin{tabular}{|p{3cm}|p{5cm}|l|}
+    \hline
+    \textbf{Duração} & Duração em dias & 90 \\
+    \hline
+    \textbf{Esforço} & Esforço em dias & 180\\
+    \hline
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{longtable}{|c|p{5cm}|p{7cm}|p{3cm}|}
+    \hline
+    \# & \textbf{TAREFA} & \textbf{DESCRIÇÃO} & \textbf{ENTREGÁVEIS} \\
+    \hline
+    6.1 & Levantamento de requisitos & Realização de reuniões com potenciais utilizadores e decisores. & Relatório técnico \\
+    \hline
+    6.2 & Especificação dos casos de uso & Realização de reuniões técnicas e de reuniões de validação. & Relatório técnico \\
+    \hline
+    6.3 & Especificação do modelo de dados & Especificação do modelo de dados.
+    & Relatório técnico \\
+    \hline
+    6.4 & Especificação da interface & Realização de reuniões técnicas e de reuniões de validação.
+    & Relatório técnico \\
+    \hline
+    6.5 & Desenvolvimento & Realização das ações conducentes ao desenvolvimento do componente.
+    & Relatório técnico \\
+    \hline
+    6.6 & Controle de qualidade & Realização de testes unitários ao novo componente.
+    & Relatório técnico \\
+    \hline
+\end{longtable}
+
+
+\subsection{WP 7 - Testes e controlo de qualidade}
+
+Ao longo do desenvolvimento da plataforma, já foram realizados vários testes e controlo de qualidade.
+No entanto, é sempre aconselhável, realizar alguns testes finais com potenciais utilizadores da plataforma e recolher o seu 
+feedback que poderá originar alguns ajustes.
+
+Note que as tarefas enunciadas abaixo deverão ser iteradas até não haver mais alterações a fazer.
+
+\begin{tabular}{|p{3cm}|p{5cm}|l|}
+    \hline
+    \textbf{Duração} & Duração em dias & 15 \\
+    \hline
+    \textbf{Esforço} & Esforço em dias & 30\\
+    \hline
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{longtable}{|c|p{5cm}|p{7cm}|p{3cm}|}
+    \hline
+    \# & \textbf{TAREFA} & \textbf{DESCRIÇÃO} & \textbf{ENTREGÁVEIS} \\
+    \hline
+    7.1 & Teste finais & Realização de testes com utilizadores reais. & Relatório técnico com o feedback dos testes realizados\\
+    \hline
+    7.2 & Ajustes/correções na plataforma & Realização de ajustes de acordo com o feedback reportado. & Relatório técnico \\
+    \hline
+\end{longtable}
+
+
+\subsection{WP 8 - Sistemas de suporte \emph{inteligentes}}
+
+Depois de montada a arquitetura com as funcinalidades básicas, pode-se introduzir a Inteligência Artificial para melhorar 
+o suporte ao utilizador que está a usar a plataforma para produzir atos nnormativos.
+
+\begin{tabular}{|p{3cm}|p{5cm}|l|}
+    \hline
+    \textbf{Duração} & Duração em dias & 90 \\
+    \hline
+    \textbf{Esforço} & Esforço em dias & 180\\
+    \hline
+\end{tabular}
+
+\vspace{0.5cm}
+
+\begin{longtable}{|c|p{5cm}|p{7cm}|p{3cm}|}
+    \hline
+    \# & \textbf{TAREFA} & \textbf{DESCRIÇÃO} & \textbf{ENTREGÁVEIS} \\
+    \hline
+    8.1 & Estudo de algumas metodologias a ser aplicadas: ML/DL/NLP & Estudo e testes de alguns algoritmos. & Relatório técnico \\
+    \hline
+    8.2 & Implementação no sistema do Diário da República dos algoritmos selecionados & 
+    Enriquecimento do sistema que suporta o Diário da República e atualização da sua API. & Relatório técnico \\
+    \hline
+    8.3 & Implementação no sistema da Jurisprudência dos algoritmos selecionados & 
+    Enriquecimento do sistema que suporta a Jurisprudência e atualização da sua API. & Relatório técnico \\
+    \hline
+    8.4 & Controle de qualidade & Realização de testes de recuperação de informação \emph{"inteligente"} entre os sistemas.
+    & Relatório técnico \\
+    \hline
+\end{longtable}
+
+
+\subsection{Resumo}
+
+Nesta secção, apresentou-se um plano de projeto conducente à instalação e desenvolvimento de uma plataforma 
+para a produção de atos normativos no contexto português.
+Caberá agora à DGPJ promover o seu desenvolvimento.
+
+De realçar que, durante o desenvolvimento, há vários pontos de sincronização entre a DGPJ e a entidade executante, as 
+tarefas relativas ao controlo de qualidade. É importante, que nesses pontos não existam tempos de espera pois não estão 
+contemplados no esforço proposto das tarefas.
+
+Para terminar, apresenta-se um quado resumo do esforço planeado.
+
+\begin{tabular}{|l|r|r|}
+    \hline
+    \textbf{WP} & \textbf{Duração} & \textbf{Esforço} \\
+    \hline
+    WP 1: Gestão & 270 & 90 \\
+    \hline
+    WP 2: Instalação & 30 & 45 \\
+    \hline
+    WP 3: Modelos & 90 & 180 \\
+    \hline
+    WP 4: Autenticação & 15 & 30 \\
+    \hline
+    WP 5: Integrações & 45 & 60 \\
+    \hline
+    WP 6: Avaliação de Impacto & 90 & 180 \\
+    \hline
+    WP 7: Controlo de Qualidade & 15 & 30 \\
+    \hline
+    WP 8: Introdução de IA & 90 & 180 \\
+    \hline\hline
+    Totais & 645 & 795 \\
+    \hline
+\end{tabular}
+
+
+\section{Recursos}
+
+Nesta secção, descrevem-se os recursos necessários à execução do projeto.
+
+\subsection{Recursos Humanos}
+
+A equipa de projeto será constituída pelos seguintes recursos humanos:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|c|p{8cm}|p{4cm}|}
+        \hline
+        \textbf{PERFIL} & \textbf{QTD} & \textbf{RESPONSABILIDADE} & \textbf{NOME} \\
+        \hline
+        Gestor de projeto & 1 & Definição de especificações, controlo de qualidade, cumprimento dos prazos, interlocução com o cliente & A indicar \\
+        \hline
+        Analista programador & 2 & Especificação e análise de modelos. Desenvolvimento de software. & A indicar \\
+        \hline
+    \end{tabular}
+    \label{tab:responsabilidades_perfis}
+\end{table}
+
+\section{Calendarização}
+
+Nos diagramas de Gantt seguintes apresenta-se uma proposta de calendarização das várias tarefas:
+
+\begin{ganttchart}[
+    y unit title=0.5cm,
+    y unit chart=0.7cm,
+    vgrid={*{5}{draw=none, draw=black!30}},
+    hgrid,
+    title label font=\bfseries,
+    milestone label font=\bfseries,
+    bar label font=\bfseries\footnotesize\textcolor{black!70},
+    group label font=\bfseries\footnotesize\textcolor{black!70},
+    bar/.append style={fill=blue!30},
+    incomplete/.append style={fill=white},
+    progress label text={},
+    link/.style={black, -latex},
+    link mid=0.25
+]{1}{12} % Period from month 1 to month 12
+  \gantttitle{Ano}{12} \\ % Year title
+  \gantttitlelist{1,...,12}{1} \\ % Month titles
+  \ganttgroup{WP1: Gestão do Projeto}{1}{12} \\ % Group
+  \ganttbar{1.1 Acompanhamento}{1}{12} \\ % Task
+  \ganttbar{1.2 Reuniões}{3}{3} % Task
+  \ganttbar[inline]{}{6}{6} % Task
+  \ganttbar[inline]{}{9}{9} % Task
+  \ganttbar[inline]{}{12}{12} \\ % Task
+  \ganttbar{1.3 Controlo de Qualidade}{11}{12} \\ % Task
+  \ganttgroup{WP2: Instalação do LEOS}{1}{1} \\ % Group
+  \ganttbar{2.1 Instalação do LEOS}{1}{1} \\ % Task
+  \ganttbar{2.2 Idioma}{1}{1} \\% Task
+  \ganttgroup{WP3: Modelos}{2}{5} \\ % Group
+  \ganttbar{3.1 Estudo do AKN}{2}{2} \\ % Task
+  \ganttbar{3.2 Tipologias AKN}{2}{3} \\% Task
+  \ganttbar{3.3 Invariantes}{3}{3} \\% Task
+  \ganttbar{3.4 Regras de Interface}{3}{3} \\% Task
+  \ganttbar{3.5 Configuração do LEOS}{4}{4} \\% Task
+  \ganttbar{3.6 Desenvolvimento da Interface}{4}{5} \\% Task
+  \ganttbar{3.7 Controlo da Qualidade}{5}{5} \\% Task
+  \ganttgroup{WP4: Autenticação e utilizadores}{5}{6} \\ % Group
+  \ganttbar{4.1 Autenticação.gov}{5}{5} \\ % Task
+  \ganttbar{4.2 Outras autenticações}{5}{5} \\% Task
+  \ganttbar{4.3 Interfaces (utilizadores)}{5}{6} \\% Task
+  \ganttbar{4.4 Controlo da Qualidade}{6}{6} \\% Task
+  \ganttgroup{WP5: Integrações}{7}{9} \\ % Group
+  \ganttbar{5.1 Integração c/ worflows}{7}{7} \\ % Task
+  \ganttbar{5.2 Integração c/ o DR}{8}{8} \\% Task
+  \ganttbar{5.3 Integração c/ jurisorudência}{9}{9} \\% Task
+  \ganttbar{5.4 Controlo da Qualidade}{9}{9} \\% Task
+  \ganttgroup{WP6: Avaliação de Impacto}{4}{10} \\ % Group
+  \ganttbar{6.1 Levantamento de requisitos}{4}{5} \\ % Task
+  \ganttbar{6.2 Casos de uso}{5}{5} \\% Task
+  \ganttbar{6.3 Modelo de Dados}{5}{5} \\% Task
+  \ganttbar{6.4 Modelação da interface}{5}{6} \\% Task
+  \ganttbar{6.5 Desenvolvimento}{6}{10} \\% Task
+  \ganttbar{6.6 Controlo da Qualidade}{10}{10} % Task
+\end{ganttchart}
+
+
+\begin{ganttchart}[
+    y unit title=0.5cm,
+    y unit chart=0.7cm,
+    vgrid={*{5}{draw=none, draw=black!30}},
+    hgrid,
+    title label font=\bfseries,
+    milestone label font=\bfseries,
+    bar label font=\bfseries\footnotesize\textcolor{black!70},
+    group label font=\bfseries\footnotesize\textcolor{black!70},
+    bar/.append style={fill=blue!30},
+    incomplete/.append style={fill=white},
+    progress label text={},
+    link/.style={black, -latex},
+    link mid=0.25
+]{1}{12} % Period from month 1 to month 12
+  \gantttitle{Ano}{12} \\ % Year title
+  \gantttitlelist{1,...,12}{1} \\ % Month titles
+  
+  \ganttgroup{WP7: Testes}{4}{10} \\ % Group
+  \ganttbar{7.1 Testes finais}{11}{11} \\ % Task
+  \ganttbar{7.2 Ajustes/correções}{11}{11} \\% Task
+  \ganttgroup{WP8: Introdução de IA}{6}{12} \\ % Group
+  \ganttbar{8.1 Estudo de algoritmos}{6}{7} \\ % Task
+  \ganttbar{8.2 Aplicação no DR}{8}{9} \\% Task
+  \ganttbar{8.3 Aplicação nas BD jurisorudência}{10}{10} \\% Task
+  \ganttbar{8.4 Controlo da Qualidade}{11}{11} % Task
+\end{ganttchart}
+
+
+\section{Estimativa de custos}
+
+Na estimativa de custos, equacionaram-se vários cenários quer em termos de remuneração base quer em termos de constituição da equipa de desenvolvimento.
+
+Para o primeiro cenário, considerou-se o gestor com um salário de 3K e o Analista/Programador com um salário de 2.5K:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|r|r|r|r|}
+        \hline
+        \textbf{Perfil} & \textbf{Salário} & \textbf{Quantidade} & \textbf{Duração} & \textbf{Total} \\
+        \hline
+        Gestor de projeto & 3000 & 1 & 4 meses & 12.000 euros\\
+        \hline
+        Analista programador & 2500 & 2 & 12 meses & 60.000 euros\\
+        \hline
+        Total & & & & 72.000 euros \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Projetando para uma equipa de 5 Analistas temos o seguinte total:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|r|r|r|r|}
+        \hline
+        \textbf{Perfil} & \textbf{Salário} & \textbf{Quantidade} & \textbf{Duração} & \textbf{Total} \\
+        \hline
+        Gestor de projeto & 3000 & 1 & 4 meses & 12.000 euros\\
+        \hline
+        Analista programador & 2500 & 5 & 12 meses & 150.000 euros\\
+        \hline
+        Total & & & & 162.000 euros \\
+        \hline
+    \end{tabular}
+\end{table}
+
+E para 10 Analistas e um Gestor com o dobro da afetação temos: 
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|r|r|r|r|}
+        \hline
+        \textbf{Perfil} & \textbf{Salário} & \textbf{Quantidade} & \textbf{Duração} & \textbf{Total} \\
+        \hline
+        Gestor de projeto & 3000 & 1 & 8 meses & 24.000 euros\\
+        \hline
+        Analista programador & 2500 & 10 & 12 meses & 300.000 euros\\
+        \hline
+        Total & & & & 324.000 euros \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Colocando um aumento de 500 euros nos salários de cada um no último cenário:
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{|l|r|r|r|r|}
+        \hline
+        \textbf{Perfil} & \textbf{Salário} & \textbf{Quantidade} & \textbf{Duração} & \textbf{Total} \\
+        \hline
+        Gestor de projeto & 3500 & 1 & 8 meses & 28.000 euros\\
+        \hline
+        Analista programador & 3000 & 10 & 12 meses & 360.000 euros\\
+        \hline
+        Total & & & & 388.000 euros \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+Com o orçamento disponível dá para contratar uma boa equipa e ter ainda uma margem para os recursos materiais.
+

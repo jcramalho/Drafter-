@@ -156,13 +156,88 @@ da tipologia.
 
 \subsubsection{Descrição dos workflows para a criação e gestão de atos normativos}
 
-O Ministério da Justiça possui já uma ferramenta própria para automatização de workflows. 
-Se for possível colocar o novo sistema a dialogar com essa ferramenta consegue-se cumprir este requisito e 
-poupar imenso tempo de desenvolvimento.
+Não havendo nenhuma ferramenta em utilização do ministério capaz de operacionalizar worflows será 
+necessário criar um componente no LEOS para assegurar este conjunto de funcionalidades.
+Este componente deverá usar a linguagem de especificação BPMN (Business Process Model and Notation)
+na especificação dos processos. Além disso, e neste contexto em particular, será necessário 
+criar um componente que permita a intervenção multi-institucional.
 
-Para isso, será necessário garantir a interoperabilidade técnica e sintática entre os dois sistemas. 
-Ou seja, terá de haver mecanismos/protocolos para o intercâmbio de informação entre os dois sistemas e 
-deverá estar definido o formato da informação que se vai trocar.
+Um sistema de gestão baseado em workflows especificados em BPMN que seja multi-institucional 
+possui várias características importantes para garantir a eficácia, eficiência, segurança e 
+interoperabilidade entre diferentes instituições:
+
+\begin{description}
+    \item[Especificação e Design de Processos] 
+        \begin{itemize}
+            \item De acordo com a norma BPMN 2.0: Suporte completo para a notação BPMN 2.0, permitindo a 
+            especificação de processos complexos com atividades, eventos, \emph{gateways} (pontos de controlo no 
+            fluxo de processos, pontos de decisão, ramificação, junção e fusão) e 
+            \emph{swimlanes} (separador de responsabilidades visual, pode ser orientado à pessoa, 
+            ao departamento ou à instituição);
+            \item Ferramenta de Design Gráfica: Interface gráfica intuitiva para desenhar e editar 
+            workflows, com validação em tempo real das regras BPMN;
+            \item Reutilização de Componentes: Capacidade de reutilizar subprocessos e fragmentos 
+            de workflow entre diferentes processos.
+        \end{itemize}
+    
+    \item[Interoperabilidade e Integração] 
+        \begin{itemize}
+            \item API Aberta: APIs RESTful e SOAP para integração com sistemas internos e externos 
+            das instituições;
+            \item Conectores Pré-definidos: Conectores para sistemas comuns como ERPs, CRMs, 
+            bases de dados, e serviços web;
+            \item Compatibilidade com Protocolos de Comunicação: Suporte para diversos protocolos 
+            de comunicação (HTTP, HTTPS, JMS, AMQP, etc).
+        \end{itemize}
+
+    \item[Gestão Multi-Institucional] 
+        \begin{itemize}
+            \item Capacidade de gerir múltiplas instituições dentro de uma mesma plataforma, 
+            com isolamento de dados e parametrizações específicas para cada instituição;
+            \item Controle de Acesso Baseado em Papéis (RBAC): Sistema robusto de permissões e 
+            acesso para garantir que apenas utilizadores autorizados de cada instituição possam 
+            aceder e modificar processos;
+            \item Visibilidade e Transparência: Ferramentas para monitorização e auditoria de 
+            processos, com logs detalhados e fluxos de auditoria específicos para cada instituição.
+        \end{itemize}
+
+    \item[Execução e Monitorização de Processos] 
+        \begin{itemize}
+            \item Motor de Execução de BPMN: Motor capaz de executar workflows BPMN com suporte 
+            para transações, compensações e atividades humanas;
+            \item Dashboard de Monitorização: Painéis para monitorizar a execução dos processos 
+            em tempo real, com métricas de desempenho, SLAs e KPIs;
+            \item Notificações e Alertas: Sistema de notificações e alertas configuráveis para 
+            eventos críticos ou exceções nos processos.
+        \end{itemize}
+
+    \item[Flexibilidade e Parametrização] 
+        \begin{itemize}
+            \item Suporte para Variáveis de Processos: Capacidade de definir variáveis de processos 
+            para atender às necessidades específicas de cada instituição;
+            \item Configuração de Políticas e Regras: Ferramentas para configurar políticas de 
+            negócio e regras de decisão (por exemplo, usando DMN - Decision Model and Notation);
+            \item Personalização de Interfaces: Capacidade de personalizar formulários, dashboards 
+            e relatórios para diferentes utilizadores e instituições.
+        \end{itemize}
+
+    \item[Segurança e Conformidade] 
+        \begin{itemize}
+            \item Criptografia de Dados: Criptografia de dados em trânsito e em repouso para 
+            proteger informações sensíveis;
+            \item Regulamentações e normas: Conformidade com regulamentações e normas de segurança 
+            e privacidade (RGPD, Política de Segurança da instituição, etc);
+            \item Autenticação e Autorização: Suporte para autenticação multi-fator (MFA) e 
+            integração com sistemas de identidade como Autenticação.gov, LDAP, Active Directory, e OAuth.
+        \end{itemize}  
+\end{description}
+
+Um sistema de gestão baseado em workflows especificados em BPMN que seja multi-institucional deve 
+ser robusto, seguro, escalável e altamente configurável para atender às necessidades variadas das 
+diferentes instituições que o irão utilizar. 
+Ele deve facilitar a colaboração, garantir a conformidade e permitir a integração com outros 
+sistemas, enquanto oferece uma interface amigável para a especificação, execução e monitorização 
+de processos.
 
 
 \subsection{Requisitos de interoperabilidade}
@@ -191,11 +266,17 @@ legislação e atos normativos, para apoio à redação legislativa e normativa:
 República. Como já foi referido atrás (\ref{bases_legis}), este é um requisito com implicações
 organizacionais e políticas, é preciso normalizar e adoptar transversalmente algumas regras. Antes da 
 interoperabilidate técnica, sintática e semântica, temos de resolver os requisitos da 
-interoperabilidade organizacional.
+interoperabilidade organizacional. 
+A nível organizacional é necessário definir a política de acesso, a estrutura das bases de dados e os métodos de 
+pesquisa e troca de informação.
 
 Pretende-se também a integração com fontes primárias de jurisprudência, que é também um problema 
 que começa no topo com a interoperabilidade organizacional (\ref{bases_jurisprud}). É preciso normalizar 
-e adotar transversalmente um conjunto de regras já expostas anteriormente.
+e adotar transversalmente um conjunto de regras já expostas anteriormente no ponto anterior.
+
+Nos pontos anteriores, e também a nível organizacional, é preciso criar uma taxonomia para a área do direito em 
+Portugal e decretar a sua adoção de uma forma transversal nestes sistemas, bases de legislação e atos normativos e bases 
+de jurisprudência.
 
 A interoperabilidade sintática e semântica fica garantida com a adoção do Akoma Ntoso \cite{AkomaNtoso2018} 
 quer para a definição estrutural e semênticas das tipologias legísticas como para o seu conteúdo.
